@@ -1,0 +1,25 @@
+.background-sup {
+  background: url(../assets/images/general/2.jpg);
+  background-position: -920px -570px;
+  padding: .1px;
+}
+
+.background-mid-sup {
+  background: linear-gradient(180deg, #010103 0%, #010103 50.02%, #000000 100%);
+}
+
+.background-mid-low {
+  position: relative;
+  background: linear-gradient(180deg, #000000 0%, #18191D 59.37%, #16171B 100%);
+  background-position: -920px -570px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: 0px 40px 40px #16171B;
+  z-index: 5;
+}
+
+.background-low {
+  background: url(../assets/images/general/8.jpg);
+  height: 1080px;
+}

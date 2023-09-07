@@ -1,0 +1,35 @@
+.plane>img {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+
+#projects {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  padding-top: 5rem;
+  margin-top: 8%;
+  width: 60%;
+}
+
+#projects>h1 {
+  font-size: 3rem;
+  margin: 20px;
+}
+
+.cont-projects>img {
+  border: 1px solid rgba(92, 91, 91, 0.411);
+  display: flex;
+  height: auto;
+  width: 100%;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .plane>img {
+    position: absolute;
+    width: 50%;
+    height: auto;
+  }
+}
