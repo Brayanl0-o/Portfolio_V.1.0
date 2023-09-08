@@ -38,6 +38,7 @@ section#about h1 {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  width: 15%;
   transition: transform 1s;
 }
 
