@@ -73,7 +73,7 @@ textarea::before {
   transform: scale(1.2);
 }
 
-footer>form>h1 {
+footer>form>h4 {
   margin: auto;
   font-size: 4rem;
   color: #010103;

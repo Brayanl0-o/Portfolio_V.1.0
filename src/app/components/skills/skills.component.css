@@ -8,7 +8,7 @@ section#skills {
   margin-left: 23%;
 }
 
-section#skills>h1 {
+section#skills>h2 {
   display: flex;
   flex-flow: column-reverse;
   writing-mode: vertical-rl;
@@ -65,7 +65,7 @@ section#skills>h1 {
     margin-left: 1.5%;
   }
 
-  section#skills>h1 {
+  section#skills>h2 {
     writing-mode: horizontal-tb;
     font-size: 2.2rem;
   }

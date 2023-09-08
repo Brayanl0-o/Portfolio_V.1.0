@@ -5,8 +5,8 @@ header {
   z-index: 1000;
 }
 
-nav,
-nav>li>a {
+nav>ul,
+nav>ul>li>a {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -20,7 +20,7 @@ nav>li>a {
   transition: background-color 2s, transform 2s;
 }
 
-nav>li>a:hover {
+nav>ul>li>a:hover {
   border-radius: 100%;
   transform: scale3d(1.2, 1.2, 4);
   background: linear-gradient(150deg, #00000000 10%, #69000000 59.37%, #16171bb9 100%);
@@ -35,7 +35,7 @@ nav>li>a:hover {
     background-color: red;
   }
 
-  nav>li>a {
+  nav>ul>li>a {
     text-align: center;
     font-size: 1rem;
     color: #dbdbdbfd;
