@@ -1,0 +1,132 @@
+section#about {
+  padding-top: 7rem;
+  margin-top: 5%;
+  margin-left: 20%;
+}
+
+#about p:first-child {
+  color: #e4e4e4fb;
+  font-size: 1.5rem;
+}
+
+section#about h1 {
+  color: #07083bfb;
+  font-size: 5rem;
+}
+
+#about p:last-of-type {
+  color: #003cff96;
+  font-size: 3rem;
+}
+
+#about.description {
+  color: aliceblue;
+  font-size: 1.1rem;
+}
+
+#about p:nth-last-child(1) {
+  color: #90a1da96;
+  font-size: 1.5rem;
+}
+
+.button-contact {
+  margin-top: 2rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #292a2c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 15%;
+  transition: transform 1s;
+}
+
+.button-contact:hover {
+  background-image: url(../../../assets/images/general/galax.jpeg);
+  transform: scale(1.2);
+}
+
+.try {
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: 60%;
+  margin-top: -15%;
+  width: 40%;
+  height: 100%;
+}
+
+.astro {
+  margin: auto;
+  width: 25%;
+  position: absolute;
+  z-index: 1000;
+}
+
+img.aguje {
+  position: relative;
+  top: 10vh;
+  left: -15%;
+  width: 100%;
+}
+
+.networks {
+  display: flex;
+  gap: 30%;
+  width: 100%;
+  z-index: 10000;
+}
+
+.networks>a>img {
+  position: absolute;
+  margin-top: -3%;
+  margin-left: 4%;
+  width: 10%;
+  transition: transform 1.5s;
+}
+
+.networks>a>img:hover {
+  transform: scale(1.1);
+  transition: transform 1.8s;
+}
+
+
+@media (max-width: 1044px) {
+  .try {
+    margin-top: -25%;
+  }
+}
+
+@media (max-width: 768px) {
+  section#about h1 {
+    color: #07083bfb;
+    font-size: 2rem;
+  }
+
+  #about p:last-of-type {
+    color: #003cff96;
+    font-size: 1.5em;
+  }
+
+  #about p:nth-last-child(1) {
+    color: #003cff96;
+    font-size: 1rem;
+  }
+}
+
+@media(max-width: 450px) {
+  section#about {
+    width: 55%;
+  }
+
+  #about p:last-of-type {
+    color: #003cff96;
+    font-size: 1em;
+  }
+
+  #about p:nth-last-child(1) {
+    color: #003cff96;
+    font-size: 0.8rem;
+  }
+
+}

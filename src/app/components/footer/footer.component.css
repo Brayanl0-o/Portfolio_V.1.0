@@ -1,0 +1,87 @@
+footer {
+  width: auto;
+  margin: auto;
+  height: auto;
+  padding: 10px;
+  margin-top: 13%;
+}
+
+footer>form {
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
+  width: 30%;
+  font-size: 1.5rem;
+  padding: 20px;
+  color: #010103;
+}
+
+footer>form>label {
+  margin: 1rem;
+  font-weight: 600;
+}
+
+footer>form>input,
+textarea {
+  background: none;
+  font-size: 1.2rem;
+}
+
+footer>form>input {
+  height: 3rem;
+}
+
+footer>form>textarea {
+  height: 10rem;
+}
+
+footer>form>input::placeholder,
+textarea::placeholder {
+  font-weight: 600;
+  background: none;
+  height: 3rem;
+  font-size: 1.2rem;
+  color: #000231;
+}
+
+footer>form>textarea {
+  resize: none;
+}
+
+footer>form>input::before,
+textarea::before {
+  background: none;
+  font-size: 1.2rem;
+}
+
+.button-contact-send {
+  color: white;
+  border: none;
+  margin: auto;
+  cursor: pointer;
+  background-color: #292a2c;
+  transition: transform 2s;
+  border-radius: 50px;
+  width: 50%;
+  margin-top: 2rem;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.button-contact-send:hover {
+  background-image: url(../../../assets/images/general/galax.jpeg);
+  transform: scale(1.2);
+}
+
+footer>form>h1 {
+  margin: auto;
+  font-size: 4rem;
+  color: #010103;
+}
+
+
+@media(max-width: 450px) {
+  footer>form {
+    width: auto;
+  }
+}
