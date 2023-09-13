@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent {
-
+  showBackend: boolean = false;
+  showFrontend: boolean = false;
+  toggleBackend() {
+    this.showBackend = !this.showBackend;
+  }
+  toggleFrontend() {
+    this.showFrontend = !this.showFrontend;
+  }
 }

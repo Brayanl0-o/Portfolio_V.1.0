@@ -4,7 +4,7 @@ section#skills {
   gap: 10%;
   padding: 20px;
   width: 60%;
-  margin-top: 5%;
+  margin-top: 0%;
   margin-left: 23%;
 }
 
@@ -27,32 +27,44 @@ section#skills>h2 {
   margin-bottom: 10%;
 }
 
-.det {
-  display: flex;
-  text-align: center;
-  flex-flow: column nowrap;
-  width: 25%;
-}
-
-.det>img {
-  padding: 10px;
-  margin: auto;
-  width: 70%;
-  height: 15vh;
-}
-
 .images {
   display: flex;
   flex-flow: row wrap;
-  width: 90%;
+  width: 100%;
   padding: 10px;
+
 }
 
-.images>img {
+.showSkills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.images>img,
+.showSkills>img {
+  width: 100%;
   padding: 10px;
   margin: auto;
   width: 15%;
-  height: 10vh;
+  height: auto;
+}
+
+button {
+  background: none;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+
 }
 
 @media (max-width: 768px) {

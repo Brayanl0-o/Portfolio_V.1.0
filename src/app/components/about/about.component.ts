@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
+  showDescription: boolean = false;
 
+  toggleDescription() {
+    this.showDescription = !this.showDescription;
+  }
 }

@@ -3,15 +3,16 @@
   <h1>Soy Brayan Triana</h1>
   <p>Desarrollador Full Stack</p>
 
-  <div class="description">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <div class="description" *ngIf="showDescription">
+    <p>Estudiante apasionado del mundo de la tecnología, actualmente enfocado en Desarrollo Web Full Stack.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       Provident deleniti voluptatibus nemo,
       accusantium veniam voluptate quod illum officiis quae itaque sapiente doloribus quasi! Dignissimos
       quaerat temporibus, alias voluptatum incidunt veniam?</p>
   </div>
 
   <div class="buttons" style="display: flex;flex-flow: column wrap;">
-    <button onclick="window.location.href='#contact'" class="button-contact">More</button>
+    <button class="button-contact" (click)="toggleDescription()">More</button>
     <button onclick="window.location.href='#contact'" class="button-contact">Contacto</button>
   </div>
 </section>

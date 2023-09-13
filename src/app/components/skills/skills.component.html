@@ -1,40 +1,24 @@
 <section id="skills">
-  <h2> >Habilidades</h2>
+  <h2>>Habilidades</h2>
   <div class="back-front">
     <div class="backend">
       <h2>Backend</h2>
-      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit fugiat id dolorem
-                  aperiam.
-              </p> -->
       <div class="images">
-        <div class="det">
-          <img src="../../../assets/images/Skills-icons/python.png " alt="Logo de Python" title="Python">
-          <p>Ult vez: hace 2 meses</p>
+        <img src="../../../assets/images/Skills-icons/python.png " alt="Logo de Python" title="Python">
+        <img src="../../../assets/images/Skills-icons/django.png " alt="Logo de Django" title="Django">
+        <img src="../../../assets/images/Skills-icons/nodejs.png" alt="Logo de NodeJS" title="Nodejs">
+        <img src="../../../assets/images/Skills-icons/mongo-54000b2b-removebg-preview.png" alt="Logo de Mongo DB"
+          title="MongoDB">
+        <div class="showSkills" *ngIf="showBackend">
+          <img src="../../../assets/images/Skills-icons/php.png" alt="PHP" title="PHP">
+          <img src="../../../assets/images/Skills-icons/mysql.png" alt="MySQL" title="MySQL">
+          <img src="../../../assets/images/Skills-icons/phpMyAdmin.png" alt="phpMyAdmin" title="phpMyAdmin">
         </div>
-        <div class="det">
-          <img src="../../../assets/images/Skills-icons/django.png " alt="Logo de Django" title="Django">
-          <p>Ult vez: hace 2 meses</p>
-        </div>
-        <div class="det">
-          <img src="../../../assets/images/Skills-icons/nodejs.png" alt="Logo de NodeJS" title="Nodejs">
-          <p>Ult vez: hace 1 semana</p>
-        </div>
-        <div class="det">
-          <img src="../../../assets/images/Skills-icons/mongo-54000b2b-removebg-preview.png" alt="Logo de Mongo DB"
-            title="MongoDB">
-          <p>Ult vez: hace 2 semanas</p>
-        </div>
-        <!-- <img src="Images/Skills-icons/php.png" alt="PHP" title="PHP">
-                  <img src="Images/Skills-icons/mysql.png" alt="MySQL" title="MySQL">
-                  <img src="Images/Skills-icons/phpMyAdmin.png" alt="phpMyAdmin" title="phpMyAdmin"> -->
       </div>
-      <a href="#">ver más</a>
+      <button (click)="toggleBackend()">ver más</button>
     </div>
     <div class="frontend">
       <h2>Frontend</h2>
-      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit fugiat id dolorem
-                  aperiam.
-            </p> -->
       <div class="images">
         <img src="../../../assets/images/Skills-icons/HTML-4f5fd109-removebg-preview.png" alt="Logo de HTML5"
           title="HTML5">
@@ -43,12 +27,14 @@
           alt="Logo de Angular" title="Angular">
         <img src="../../../assets/images/Skills-icons/JS-5c44a4db-removebg-preview.png" alt="Logo de JavaScript"
           title="JavaScript">
-        <!-- <img src="Images/Skills-icons/typescript-removebg-preview.png" alt="TypeScript"
-                      title="TypeScript">
-                  <img src="Images/Skills-icons/dreamweaver.png" alt="Dreamweaver" title="Dreamweaver">
-                  <img src="Images/Skills-icons/ejs.png" alt="Ejs" title="Ejs"> -->
+        <div class="showSkills" *ngIf="showFrontend">
+          <img src="../../../assets/images/Skills-icons/typescript-removebg-preview.png" alt="TypeScript"
+            title="TypeScript">
+          <img src="../../../assets/images/Skills-icons/dreamweaver.png" alt="Dreamweaver" title="Dreamweaver">
+          <img src="../../../assets/images/Skills-icons/ejs.png" alt="Ejs" title="Ejs">
+        </div>
       </div>
-      <a href="#">ver más</a>
+      <button (click)="toggleFrontend()">ver más</button>
     </div>
   </div>
 </section>
