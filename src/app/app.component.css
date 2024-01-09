@@ -10,16 +10,22 @@
 
 .background-mid-low {
   position: relative;
-  background: linear-gradient(180deg, #000000 0%, #18191D 59.37%, #16171B 100%);
+  background: linear-gradient(180deg, #000000 0%, #020516 59.37%, #020516 100%);
   background-position: -920px -570px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  box-shadow: 0px 40px 40px #16171B;
+  box-shadow: 0px 20px 30px #020516;
+
   z-index: 5;
+
 }
 
 .background-low {
+  box-shadow: 0px -40px 40px #020516;
   background: url(../assets/images/general/video_game-half_life_2-alyx_vance-silhouette-431084.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   height: 1080px;
 }
