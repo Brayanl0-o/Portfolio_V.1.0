@@ -38,7 +38,7 @@ section#about h1 {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  width: 15%;
+  width: min-content;
   transition: transform 1s;
 }
 
