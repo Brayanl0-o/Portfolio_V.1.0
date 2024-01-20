@@ -60,10 +60,10 @@ a:hover {
     animation-play-state: paused;
 }
 .checkbox.scnd + label{
-  background-image: url('../../../assets/images/slider-images/referencesBooksHaven/BooksHavenHome.png');
+  background-image: url('../../../assets/images/slider-images/referencesForoPacto/login.png');
 }
 .checkbox.thrd + label{
-  background-image: url('../../../assets/images/slider-images/referencesForoPacto/login.png');
+  background-image: url('../../../assets/images/slider-images/referencesBooksHaven/BooksHavenHome.png');
 }
 .checkbox.foth + label{
   background-image: url('../../../assets/images/slider-images/deezerCopy.png');
@@ -170,10 +170,10 @@ ul li span {
 }
 
 ul li:nth-child(2) {
-  background-image: url('../../../assets/images/slider-images/referencesBooksHaven/BooksHavenHome.png');
+  background-image: url('../../../assets/images/slider-images/referencesForoPacto/login.png');
 }
 ul li:nth-child(3) {
-  background-image: url('../../../assets/images/slider-images/referencesForoPacto/login.png');
+  background-image: url('../../../assets/images/slider-images/referencesBooksHaven/BooksHavenHome.png');
 }
 ul li:nth-child(4) {
   background-image: url('../../../assets/images/slider-images/deezerCopy.png');
