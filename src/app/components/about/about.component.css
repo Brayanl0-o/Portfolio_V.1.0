@@ -26,6 +26,9 @@ section#about h1 {
   flex-flow: row wrap;
   gap: 20px;
 }
+.buttons>button:nth-child(1){
+  display: none;
+}
 
 .button-contact {
   margin-top: 2rem;
