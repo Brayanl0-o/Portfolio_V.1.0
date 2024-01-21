@@ -1,3 +1,9 @@
+#contact{
+  position: relative;
+  font-size: largers;
+  top: 8%;
+  width: 100%;
+}
 footer {
   width: auto;
   margin: auto;
