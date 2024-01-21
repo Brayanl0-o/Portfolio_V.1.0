@@ -2,42 +2,31 @@ section#about {
   padding-top: 7rem;
   margin-top: 5%;
   margin-left: 15%;
+  height: 40vh;
   width: 50%;
 }
 
-#about p:first-child {
+#about p{
   color: #e4e4e4fb;
   font-size: 1.5rem;
   margin-top: 10px;
-
 }
 
 section#about h1 {
-  color: #07083bfb;
+  color: #070861fb;
   font-size: 5rem;
-}
-
-#about p:last-of-type {
-  color: #003cff96;
-  font-size: 3rem;
-  margin-top: 10px;
 }
 
 #about.description {
   color: aliceblue;
   font-size: 1.1rem;
 }
-
-#about p:nth-last-child(1) {
-  color: #ffffffbd;
-  font-size: 1.5rem;
-}
 .buttons{
   display: flex;
   flex-flow: row wrap;
   gap: 20px;
-
 }
+
 .button-contact {
   margin-top: 2rem;
   padding: 10px 20px;
@@ -48,7 +37,7 @@ section#about h1 {
   border: none;
   cursor: pointer;
   width: min-content;
-  transition: transform 1s;
+  transition: transform 1.5s;
 }
 
 .button-contact:hover {
@@ -56,13 +45,14 @@ section#about h1 {
   transform: scale(1.2);
 }
 
+/* Astrounaut */
 .try {
   display: flex;
   flex-flow: column wrap;
   margin-left: 60%;
-  margin-top: -15%;
+  margin-top: -10%;
   width: 40%;
-  height: 100%;
+  height: auto;
 }
 
 .astro {
@@ -99,7 +89,7 @@ img.aguje {
   transition: transform 1.8s;
 }
 
-
+/* Media querys */
 @media (max-width: 1044px) {
   .try {
     margin-top: -25%;
@@ -139,3 +129,14 @@ img.aguje {
   }
 
 }
+
+
+/* #about p:last-of-type {
+  color: #003cff96;
+  font-size: 3rem;
+  margin-top: 10px;
+} */
+/* #about p:nth-last-child(1) {
+  color: #ffffffbd;
+  font-size: 1.5rem;
+} */
