@@ -13,13 +13,15 @@ section#cont-skills>h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3%;
-  color: white;
+  color:#bdc3c7;
+
 }
 
 section#cont-skills h3 {
 
   width: 100%;
   margin: auto;
+  padding: 5px 0px 5px 0px;
   text-align: center;
   font-size: 1.6rem;
   border-top: solid 1px white;
@@ -36,8 +38,9 @@ section#cont-skills h3 {
   width: 45%;
 }
 
-.tools{
- margin-top:10%;
+.tools,
+.frontend{
+ margin-bottom:10%;
 
 }
 
@@ -52,7 +55,7 @@ section#cont-skills h3 {
 
 .images>img{
   border-radius: 100%;
-  border: dashed 1px white;
+  /* border: dashed 1px white; */
   background-color: #88888833;
   margin: 10px;
   width:auto;
@@ -61,17 +64,34 @@ section#cont-skills h3 {
   height: auto;
   min-height: 100px;
   max-height: 100px;
+  border: 3px solid #bdc3c7;
+
+  box-sizing: border-box;
+  transition: all 1s ease;
+  animation: border-transform 19s linear infinite alternate forwards;
+  transform: scale(1.1);
+  animation-play-state: running;
 }
 
 .images>img:hover{
-  transform:scale(1.1) ;
+  transform:scale(1.2);
   cursor: pointer;
-  border: solid 1px blue;
+  border: solid 1px rgb(0, 0, 172);
   background-color: #000000;
-
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
 }
 
-
+@keyframes border-transform{
+  0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+  14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; }
+  28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; }
+  42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; }
+  56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; }
+  70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; }
+  84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
+}
 
 @media (max-width: 768px) {
 
