@@ -17,13 +17,13 @@ footer>form {
 }
 
 footer>form>label {
-  margin: 1rem;
+  margin:1rem 0rem 1rem 0.5rem;
   font-weight: 600;
 }
 
 footer>form>input,
 textarea {
-  background: none;
+  background: rgba(128, 128, 128, 0.514);
   font-size: 1.2rem;
 }
 
@@ -60,9 +60,9 @@ textarea::before {
   margin: auto;
   cursor: pointer;
   background-color: #292a2c;
-  transition: transform 2s;
+  transition: transform 1.5s;
   border-radius: 50px;
-  width: 50%;
+  width: 25%;
   margin-top: 2rem;
   padding: 10px;
   font-size: 1rem;
@@ -70,7 +70,7 @@ textarea::before {
 
 .button-contact-send:hover {
   background-image: url(../../../assets/images/general/galax.jpeg);
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 footer>form>h4 {
