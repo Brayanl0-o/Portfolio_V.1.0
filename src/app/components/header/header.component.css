@@ -4,7 +4,13 @@ header {
   display: flexbox;
   z-index: 1000;
 }
+nav>ul>li{
+  background-color: rgba(104, 104, 104, 0.116);
+  border-radius: 100%;
+  padding: 5px;
+  transition: all 1.3s ease;
 
+}
 nav>ul,
 nav>ul>li>a {
   display: flex;
@@ -14,13 +20,13 @@ nav>ul>li>a {
   background-color: none;
   list-style: none;
   color: rgb(221, 133, 19);
-  gap: 3rem;
-  padding: 10px;
-  font-size: 1.5rem;
-  transition: background-color 2s, transform 2s;
+  gap: 2.5rem;
+  padding: 10px 5px 5px 5px;
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
-nav>ul>li>a:hover {
+nav>ul>li:hover {
   border-radius: 100%;
   transform: scale3d(1.2, 1.2, 4);
   background: linear-gradient(150deg, #00000000 10%, #69000000 59.37%, #16171bb9 100%);
