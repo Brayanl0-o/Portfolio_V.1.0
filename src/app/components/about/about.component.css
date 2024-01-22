@@ -67,7 +67,8 @@ section.description {
   margin: auto;
   width: 25%;
   position: absolute;
-  z-index: 1000;
+  z-index: 10;
+
 }
 
 img.aguje {
@@ -75,13 +76,14 @@ img.aguje {
   top: 10vh;
   left: -15%;
   width: 100%;
+
 }
 
 .networks {
   display: flex;
   gap: 30%;
   width: 100%;
-  z-index: 10000;
+  z-index: 10;
   margin-bottom: 20%;
 
 }
@@ -102,35 +104,40 @@ img.aguje {
 /* Media querys */
 @media (max-width: 1444px) {
   section {
-    margin-top: 5%;
+    margin-top: 15%;
+    margin-bottom: 15%;
     height: 40vh;
     width: 50%;
   }
-
 }
 
 @media (max-width: 888px) {
-
   section {
-    margin-top: 20%;
-    height: 40vh;
-    width: 50%;
+    margin-top: 25%;
+    margin-bottom: 10%;
+    height: 30vh;
+    width: 70%;
   }
   section h1 {
     font-size: 3rem;
   }
   section p {
-    font-size: 1em;
+    font-size: 1.3em;
   }
   .networks {
     margin-bottom: 30%;
   }
+  .try {
+    margin-top: 0%;
+    margin-bottom: 10%;
+
+  }
 }
 
-@media(max-width: 450px) {
+@media(max-width: 500px) {
   section {
     margin: auto;
-    margin-top: 25%;
+    margin-top: 30%;
     height: auto;
     width: 80%;
   }
