@@ -1,23 +1,28 @@
-section#about {
-  padding-top: 7rem;
-  margin-top: 5%;
+#about{
+  position: relative;
+  font-size: largers;
+  top: 8%;
+  width: 100%;
+}
+section {
+  margin-top: 10%;
   margin-left: 15%;
   height: 40vh;
   width: 50%;
 }
 
-#about p{
+section p{
   color: #e4e4e4fb;
   font-size: 1.5rem;
   margin-top: 10px;
 }
 
-section#about h1 {
+section>h1 {
   color: #070861fb;
   font-size: 5rem;
 }
 
-#about.description {
+section.description {
   color: aliceblue;
   font-size: 1.1rem;
 }
@@ -77,6 +82,8 @@ img.aguje {
   gap: 30%;
   width: 100%;
   z-index: 10000;
+  margin-bottom: 20%;
+
 }
 
 .networks>a>img {
@@ -93,53 +100,52 @@ img.aguje {
 }
 
 /* Media querys */
-@media (max-width: 1044px) {
-  .try {
-    margin-top: -25%;
+@media (max-width: 1444px) {
+  section {
+    margin-top: 5%;
+    height: 40vh;
+    width: 50%;
   }
+
 }
 
-@media (max-width: 768px) {
-  section#about h1 {
-    color: #07083bfb;
-    font-size: 2rem;
-  }
+@media (max-width: 888px) {
 
-  #about p:last-of-type {
-    color: #003cff96;
-    font-size: 1.5em;
+  section {
+    margin-top: 20%;
+    height: 40vh;
+    width: 50%;
   }
-
-  #about p:nth-last-child(1) {
-    color: #003cff96;
-    font-size: 1rem;
+  section h1 {
+    font-size: 3rem;
+  }
+  section p {
+    font-size: 1em;
+  }
+  .networks {
+    margin-bottom: 30%;
   }
 }
 
 @media(max-width: 450px) {
-  section#about {
-    width: 55%;
+  section {
+    margin: auto;
+    margin-top: 25%;
+    height: auto;
+    width: 80%;
   }
-
-  #about p:last-of-type {
-    color: #003cff96;
+  section h1 {
+    font-size: 2.5rem;
+  }
+  section p {
     font-size: 1em;
   }
-
-  #about p:nth-last-child(1) {
-    color: #003cff96;
-    font-size: 0.8rem;
+  .try {
+    margin-top: -10%;
   }
-
+  .networks {
+    margin-bottom: 10rem;
+  }
 }
 
 
-/* #about p:last-of-type {
-  color: #003cff96;
-  font-size: 3rem;
-  margin-top: 10px;
-} */
-/* #about p:nth-last-child(1) {
-  color: #ffffffbd;
-  font-size: 1.5rem;
-} */
