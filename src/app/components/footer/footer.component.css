@@ -1,7 +1,7 @@
 #contact{
   position: relative;
   font-size: largers;
-  top: 8%;
+  top: 20%;
   width: 100%;
 }
 footer {
@@ -68,7 +68,7 @@ textarea::before {
   background-color: #292a2c;
   transition: transform 1.5s;
   border-radius: 50px;
-  width: 25%;
+  width: max-content;
   margin-top: 2rem;
   padding: 10px;
   font-size: 1rem;
@@ -82,12 +82,25 @@ textarea::before {
 footer>form>h4 {
   margin: auto;
   font-size: 4rem;
-  color: #010103;
+  color: #8888a5;
 }
 
+@media(max-width: 1250px) {
+  footer>form {
+    width: 60%;
+    padding: 20px;
+    margin-top: 4%;
+    margin-bottom: 10%;
 
+  }
+}
 @media(max-width: 450px) {
   footer>form {
+    margin-top: 10%;
     width: auto;
+  }
+  footer>form>h4 {
+    margin: auto;
+    font-size: 3rem;
   }
 }
