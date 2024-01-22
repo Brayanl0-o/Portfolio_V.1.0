@@ -2,10 +2,13 @@
   background: url(../assets/images/general/2.jpg);
   background-position: -920px -570px;
   padding: .1px;
+  /* border-bottom: 1px solid white; */
 }
 
 .background-mid-sup {
   background: linear-gradient(180deg, #010103 0%, #010103 50.02%, #000000 100%);
+  /* border-bottom: 1px solid white; */
+
 }
 
 .background-mid-low {
@@ -16,8 +19,8 @@
   background-repeat: no-repeat;
   background-position: center center;
   box-shadow: 0px 20px 30px #020516;
-
   z-index: 5;
+  /* border-bottom: 1px solid white; */
 
 }
 
@@ -28,4 +31,28 @@
   background-repeat: no-repeat;
   background-position: center center;
   height: 1080px;
+}
+
+
+@media screen and (max-width:1110px) {
+  .background-sup {
+    height: fit-content;
+
+  }
+
+  .background-mid-sup {
+    height: fit-content;
+
+
+  }
+
+  .background-mid-low {
+    height: fit-content;
+
+
+  }
+
+  .background-low {
+   height: fit-content;
+  }
 }
