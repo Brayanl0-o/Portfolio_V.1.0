@@ -9,7 +9,7 @@ footer {
   margin: auto;
   height: auto;
   padding: 10px;
-  margin-top: 8%;
+  margin-top: 10%;
 }
 
 footer>form {
@@ -17,20 +17,21 @@ footer>form {
   flex-flow: column wrap;
   margin: auto;
   width: 30%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 20px;
   color: #010103;
 }
 
 footer>form>label {
-  margin:1rem 0rem 1rem 0.5rem;
-  font-weight: 600;
+  font-size: 1.7rem;
+  margin:1rem 0rem 0.8rem 0.3rem;
+  font-weight: 700;
 }
 
 footer>form>input,
 textarea {
   background: rgba(128, 128, 128, 0.514);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 footer>form>input {
@@ -67,11 +68,11 @@ textarea::before {
   cursor: pointer;
   background-color: #292a2c;
   transition: transform 1.5s;
-  border-radius: 50px;
+  border-radius: 20px;
   width: max-content;
   margin-top: 2rem;
-  padding: 10px;
-  font-size: 1rem;
+  padding: 15px;
+  font-size: 1.3rem;
 }
 
 .button-contact-send:hover {
