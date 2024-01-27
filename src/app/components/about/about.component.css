@@ -111,6 +111,29 @@ img.aguje {
   }
 }
 
+/* Media querys */
+@media (max-width: 1440px) {
+  section {
+    margin-top: 15%;
+    margin-bottom: 5%;
+    height: 20vh;
+    width: 70%;
+  }
+  section h1 {
+    font-size: 3rem;
+  }
+  section p {
+    font-size: 1.3em;
+  }
+  .networks {
+    margin-bottom: 30%;
+  }
+  .try {
+    margin-top: 0%;
+
+  }
+}
+
 @media (max-width: 888px) {
   section {
     margin-top: 25%;
@@ -140,6 +163,7 @@ img.aguje {
     margin-top: 30%;
     height: auto;
     width: 80%;
+    /* border: ; */
   }
   section h1 {
     font-size: 2.5rem;
