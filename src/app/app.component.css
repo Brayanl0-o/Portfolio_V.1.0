@@ -34,7 +34,7 @@
 }
 
 /* Media querys */
-@media screen and (max-width:1110px) {
+/* @media screen and (max-width:1110px) {
   .background-sup {
     height: fit-content;
 
@@ -55,4 +55,4 @@
   .background-low {
    height: fit-content;
   }
-}
+} */
