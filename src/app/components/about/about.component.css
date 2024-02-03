@@ -7,8 +7,13 @@
 section {
   margin-top: 10%;
   margin-left: 15%;
-  height: 40vh;
+  height: min-content;
+  min-height:min-content ;
   width: 50%;
+  animation-name:  aparicion;
+  animation-duration: 3s;
+  animation-delay: 1.5;
+  animation-fill-mode: forwards;
 }
 
 section p{
@@ -22,10 +27,12 @@ section>h1 {
   font-size: 5rem;
 }
 
-section.description {
+.description {
   color: aliceblue;
   font-size: 1.1rem;
+  transition: all 5s ease;
 }
+
 .buttons{
   display: flex;
   flex-flow: row wrap;
@@ -54,69 +61,62 @@ section.description {
 }
 
 /* Astrounaut */
-.try {
-  display: flex;
-  flex-flow: column wrap;
-  margin-left: 60%;
-  margin-top: -10%;
-  width: 40%;
-  height: auto;
-}
-
-.astro {
-  margin: auto;
-  width: 25%;
+.aside {
   position: absolute;
-  z-index: 10;
-
+  right: 10%;
+  bottom: 5%;
+  /* background-color: rgba(236, 123, 123, 0.884); */
+  z-index: 0;
+  animation-name:  aparicion;
+  animation-duration: 4s;
+  animation-delay: 1.5;
+  animation-fill-mode: forwards;
 }
 
-img.aguje {
+.astronauta {
   position: relative;
-  top: 10vh;
-  left: -15%;
-  width: 100%;
-
 }
 
 .networks {
-  display: flex;
-  gap: 30%;
+  position: absolute;
   width: 100%;
+  /* background-color: #292a2c2a; */
   z-index: 10;
-  margin-bottom: 20%;
-
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  bottom: 10%;
 }
 
-.networks>a>img {
-  position: absolute;
-  margin-top: -3%;
-  margin-left: 4%;
-  width: 10%;
+.networks > a > img {
   transition: transform 1.5s;
 }
 
-.networks>a>img:hover {
+.networks > a:hover > img {
   transform: scale(1.1);
   transition: transform 1.8s;
+}
+@keyframes aparicion{
+  0%{opacity:0; transform:scale(0.2) ;}
+  50%{opacity:0.5;}
+  100%{opacity:1;transform:scale(1)}
 }
 
 /* Media querys */
 @media (max-width: 1444px) {
   section {
     margin-top: 15%;
-    margin-bottom: 15%;
-    height: 40vh;
+    /* margin-bottom: 15%; */
+    /* height: 40vh; */
     width: 50%;
   }
 }
-
-/* Media querys */
 @media (max-width: 1440px) {
   section {
     margin-top: 15%;
     margin-bottom: 5%;
-    height: 20vh;
+    /* height: 20vh; */
     width: 70%;
   }
   section h1 {
@@ -125,20 +125,12 @@ img.aguje {
   section p {
     font-size: 1.3em;
   }
-  .networks {
-    margin-bottom: 30%;
-  }
-  .try {
-    margin-top: 0%;
-
-  }
 }
-
 @media (max-width: 888px) {
   section {
     margin-top: 25%;
     margin-bottom: 10%;
-    height: 30vh;
+    /* height: 30vh; */
     width: 70%;
   }
   section h1 {
@@ -147,35 +139,19 @@ img.aguje {
   section p {
     font-size: 1.3em;
   }
-  .networks {
-    margin-bottom: 30%;
-  }
-  .try {
-    margin-top: 0%;
-    margin-bottom: 10%;
-
-  }
 }
-
 @media(max-width: 500px) {
   section {
     margin: auto;
     margin-top: 30%;
     height: auto;
     width: 80%;
-    /* border: ; */
   }
   section h1 {
     font-size: 2.5rem;
   }
   section p {
     font-size: 1em;
-  }
-  .try {
-    margin-top: -10%;
-  }
-  .networks {
-    margin-bottom: 10rem;
   }
 }
 
