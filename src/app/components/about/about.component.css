@@ -5,8 +5,8 @@
   width: 100%;
 }
 section {
-  margin-top: 10%;
-  margin-left: 15%;
+  margin:10% 10% 10% 15% ;
+
   height: min-content;
   min-height:min-content ;
   width: 50%;
@@ -63,8 +63,8 @@ section>h1 {
 /* Astrounaut */
 .aside {
   position: absolute;
-  right: 10%;
-  bottom: 5%;
+  right: 0%;
+  bottom: -5%;
   /* background-color: rgba(236, 123, 123, 0.884); */
   z-index: 0;
   animation-name:  aparicion;
@@ -76,7 +76,9 @@ section>h1 {
 .astronauta {
   position: relative;
 }
-
+.astronauta>img {
+  width: 100%;
+}
 .networks {
   position: absolute;
   width: 100%;
@@ -86,7 +88,7 @@ section>h1 {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  bottom: 10%;
+  bottom: 20%;
 }
 
 .networks > a > img {
