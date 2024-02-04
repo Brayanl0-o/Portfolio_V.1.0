@@ -12,10 +12,12 @@
   text-align: center;
   color:#bdc3c7;
 }
+
 [type="radio"]:checked,
 [type="radio"]:not(:checked){
   position: absolute;
   left: -9999px;
+
 }
 .checkbox:checked + label,
 .checkbox:not(:checked) + label{
@@ -40,6 +42,7 @@
     -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused;
     animation-play-state: paused;
+
 }
 .checkbox.scnd + label{
   background-image: url('../../../assets/images/slider-images/referencesForoPacto/login.png');
@@ -71,6 +74,12 @@
   84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
 }
 
+@keyframes aparicion{
+  0%{opacity:0; transform:scale(0.5) ;}
+  50%{opacity:0.5;}
+  100%{opacity:1;transform:scale(1)}
+}
+
 .slider-height-padding {
   padding-top: 500px;
   display: flex;
@@ -84,6 +93,10 @@
   margin-top: 2%;
   font-family: 'Poppins', sans-serif;
 
+  animation-name:  aparicion;
+  animation-duration:5s;
+  animation-delay: 1.5;
+  animation-fill-mode: forwards;
 
 }
 
@@ -98,6 +111,10 @@ ul {
   margin: 0;
   list-style: none;
   background-color: #343434;
+  animation-name:  aparicion;
+  animation-duration: 6s;
+  /* animation-delay: 1.5; */
+  animation-fill-mode: forwards;
 
 }
 ul li {
@@ -165,6 +182,7 @@ ul li:nth-child(4) {
 }
 ul li:nth-child(5) {
   background-image: url('../../../assets/images/slider-images/deezerCopy.png');
+
 }
 
 .checkbox.frst:checked ~ ul li:nth-child(1) {
