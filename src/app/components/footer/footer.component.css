@@ -11,7 +11,30 @@ footer {
   padding: 10px;
   margin-top: 10%;
 }
+footer>h4 {
+  font-size: 4rem;
+  color: #8888a5;
+  width: 100%;
+  text-align: center;
+  background-color: rebeccapurple;
+  margin-bottom: 5%;
+}
+footer>ul{
+  list-style: none;
+  font-size: 1.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 40%;
+  margin: auto;
 
+}
+footer>ul>li{
+  border-radius: 100px;
+  background-color: #8888a527;
+  width: fit-content;
+  cursor: pointer;
+}
 footer>form {
   display: flex;
   flex-flow: column wrap;
@@ -80,12 +103,6 @@ textarea::before {
   transform: scale(1.1);
 }
 
-footer>form>h4 {
-  margin: auto;
-  font-size: 4rem;
-  color: #8888a5;
-}
-
 @media(max-width: 1250px) {
   footer>form {
     width: 60%;
@@ -100,7 +117,7 @@ footer>form>h4 {
     margin-top: 10%;
     width: auto;
   }
-  footer>form>h4 {
+  footer>h4 {
     margin: auto;
     font-size: 3rem;
   }
