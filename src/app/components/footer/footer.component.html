@@ -1,7 +1,13 @@
 <span id="contact"></span>
 <footer>
-  <form action="get">
-    <h4>Contacto</h4>
+  <h4>Contacto</h4>
+  <ul>
+    <li>Whatssap</li>
+    <li (click)="toggleContactForm()">Gmail</li>
+    <li>Ver Hoja de vida</li>
+    <li>Descargar hoja de vida</li>
+  </ul>
+  <form action="get" *ngIf="showContactForm">
     <label for="name">Nombre:</label>
     <input type="text" id="name" name="name" placeholder="Nombre del remitente" required>
     <label for="email">Email:</label>
@@ -10,4 +16,5 @@
     <textarea name="message" id="message" cols="6" rows="7" placeholder="Mensaje" required></textarea>
     <button type="button" class="button-contact-send">Enviar</button>
   </form>
+
 </footer>
