@@ -74,11 +74,11 @@
   84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
 }
 
-@keyframes aparicion{
+/* @keyframes aparicion{
   0%{opacity:0; transform:scale(0.5) ;}
   50%{opacity:0.5;}
   100%{opacity:1;transform:scale(1)}
-}
+} */
 
 .slider-height-padding {
   padding-top: 500px;
@@ -92,11 +92,11 @@
   margin: auto;
   margin-top: 2%;
   font-family: 'Poppins', sans-serif;
-
+/*
   animation-name:  aparicion;
   animation-duration:5s;
   animation-delay: 1.5;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 
 }
 
@@ -111,10 +111,9 @@ ul {
   margin: 0;
   list-style: none;
   background-color: #343434;
-  animation-name:  aparicion;
+  /* animation-name:  aparicion;
   animation-duration: 6s;
-  /* animation-delay: 1.5; */
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 
 }
 ul li {
