@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   showContactForm: boolean = false;
+  showOptionsCV: boolean = false;
 
   toggleContactForm(){
     this.showContactForm = !this.showContactForm;
+  }
+  toggleOptionsCV(){
+    this.showOptionsCV = !this.showOptionsCV;
   }
 }
