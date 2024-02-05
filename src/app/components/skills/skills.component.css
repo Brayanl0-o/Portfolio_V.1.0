@@ -38,6 +38,7 @@ section#cont-skills h3 {
 .tools,
 .frontend{
   margin-bottom:10%;
+
 }
 
 .images {
@@ -47,6 +48,10 @@ section#cont-skills h3 {
   width: auto;
   justify-content: space-around ;
   align-items: center;
+  animation-name:  aparicion;
+  animation-duration: 4s;
+  animation-delay: 1.5;
+  animation-fill-mode: forwards;
 }
 
 .images>img{
@@ -87,6 +92,11 @@ section#cont-skills h3 {
   56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; }
   70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; }
   84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
+}
+@keyframes aparicion{
+  0%{opacity:0; transform:scale(0.2) ;}
+  50%{opacity:0.5;}
+  100%{opacity:1;transform:scale(1)}
 }
 /* Mediaq querys */
 @media screen and (max-width:1500px){
