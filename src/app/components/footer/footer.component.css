@@ -38,9 +38,13 @@ footer>ul>li{
 
 }
 footer>ul>li>img{
-  width:160px;
-  height: 100px;
+  width:150px;
+  height: 120px;
   padding: 0px;
+  animation-name:  aparicion;
+  animation-duration: 2.5s;
+  animation-delay: 1.5;
+  animation-fill-mode: forwards;
 }
 footer>ul>li:last-child>img{
   position: relative;
@@ -133,7 +137,12 @@ textarea::before {
   background-image: url(../../../assets/images/general/galax.jpeg);
   transform: scale(1.1);
 }
-
+@keyframes aparicion{
+  0%{opacity:0; transform:scale(0.2) ;}
+  50%{opacity:0.5;}
+  100%{opacity:1;transform:scale(1)}
+}
+/* Media querys */
 @media(max-width: 1250px) {
   footer>form {
     width: 60%;
