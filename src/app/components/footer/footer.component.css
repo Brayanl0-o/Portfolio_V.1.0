@@ -16,7 +16,6 @@ footer>h4 {
   color: #8888a5;
   width: 100%;
   text-align: center;
-  /* background-color: rebeccapurple; */
   margin-bottom: 5%;
 }
 footer>ul{
@@ -37,38 +36,11 @@ footer>ul>li{
   padding: 0;
 
 }
-footer>ul>li>img{
+footer>ul>li>img,
+footer>ul>li>a>img{
   width:150px;
   height: 120px;
   padding: 0px;
-  animation-name:  aparicion;
-  animation-duration: 2.5s;
-  animation-delay: 1.5;
-  animation-fill-mode: forwards;
-}
-footer>ul>li:last-child>img{
-  position: relative;
-
-}
-.options-cv{
-  position: relative;
-  bottom: 0%;
-  right: 0px;
-}
-.options-cv>li{
-  position: absolute;
-  list-style: none;
-  margin-top: 10%;
-}
-.options-cv>li:nth-child(1){
-  /* background-color: red; */
-  right: -20%;
-  list-style: none;
-}
-.options-cv>li:nth-child(2){
-  /* background-color: red; */
-  left: -20%;
-  list-style: none;
 }
 footer>form {
   display: flex;
@@ -79,27 +51,22 @@ footer>form {
   padding: 20px;
   color: #010103;
 }
-
 footer>form>label {
   font-size: 1.7rem;
   margin:1rem 0rem 0.8rem 0.3rem;
   font-weight: 700;
 }
-
 footer>form>input,
 textarea {
   background: rgba(128, 128, 128, 0.514);
   font-size: 1rem;
 }
-
 footer>form>input {
   height: 3rem;
 }
-
 footer>form>textarea {
   height: 10rem;
 }
-
 footer>form>input::placeholder,
 textarea::placeholder {
   font-weight: 600;
@@ -108,17 +75,14 @@ textarea::placeholder {
   font-size: 1.2rem;
   color: #000231;
 }
-
 footer>form>textarea {
   resize: none;
 }
-
 footer>form>input::before,
 textarea::before {
   background: none;
   font-size: 1.2rem;
 }
-
 .button-contact-send {
   color: white;
   border: none;
@@ -132,16 +96,11 @@ textarea::before {
   padding: 15px;
   font-size: 1.3rem;
 }
-
 .button-contact-send:hover {
   background-image: url(../../../assets/images/general/galax.jpeg);
   transform: scale(1.1);
 }
-@keyframes aparicion{
-  0%{opacity:0; transform:scale(0.2) ;}
-  50%{opacity:0.5;}
-  100%{opacity:1;transform:scale(1)}
-}
+
 /* Media querys */
 @media(max-width: 1250px) {
   footer>form {
@@ -149,7 +108,6 @@ textarea::before {
     padding: 20px;
     margin-top: 4%;
     margin-bottom: 10%;
-
   }
 }
 @media(max-width: 450px) {
