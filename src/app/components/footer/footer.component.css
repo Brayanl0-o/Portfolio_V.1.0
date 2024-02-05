@@ -16,7 +16,7 @@ footer>h4 {
   color: #8888a5;
   width: 100%;
   text-align: center;
-  background-color: rebeccapurple;
+  /* background-color: rebeccapurple; */
   margin-bottom: 5%;
 }
 footer>ul{
@@ -34,6 +34,37 @@ footer>ul>li{
   background-color: #8888a527;
   width: fit-content;
   cursor: pointer;
+  padding: 0;
+
+}
+footer>ul>li>img{
+  width:160px;
+  height: 100px;
+  padding: 0px;
+}
+footer>ul>li:last-child>img{
+  position: relative;
+
+}
+.options-cv{
+  position: relative;
+  bottom: 0%;
+  right: 0px;
+}
+.options-cv>li{
+  position: absolute;
+  list-style: none;
+  margin-top: 10%;
+}
+.options-cv>li:nth-child(1){
+  /* background-color: red; */
+  right: -20%;
+  list-style: none;
+}
+.options-cv>li:nth-child(2){
+  /* background-color: red; */
+  left: -20%;
+  list-style: none;
 }
 footer>form {
   display: flex;
