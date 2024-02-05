@@ -2,11 +2,16 @@
 <footer>
   <h4>Contacto</h4>
   <ul>
-    <li>Whatssap</li>
-    <li (click)="toggleContactForm()">Gmail</li>
-    <li>Ver Hoja de vida</li>
-    <li>Descargar hoja de vida</li>
+    <li><img src="../../../assets/images/contact-icons/whatssap_logo.png"  alt="Whatssap"></li>
+    <li (click)="toggleContactForm()"> <img src="../../../assets/images/contact-icons/email_logo.png" alt="Enviar email"></li>
+    <li (click)="toggleOptionsCV()" > <img src="../../../assets/images/contact-icons/cv_logo.png"alt="Hoja de vida">
+      <ul class="options-cv" >
+        <li *ngIf="showOptionsCV"><img src="../../../assets/images/contact-icons/ojo.png" width="100px" height="70px"  alt="Ver Hoja de vida"></li>
+        <li *ngIf="showOptionsCV"><img src="../../../assets/images/contact-icons/descargar_icon.png" width="100px" height="70px" alt="Descargar Hoja de vida"></li>
+      </ul>
+    </li>
   </ul>
+
   <form action="get" *ngIf="showContactForm">
     <label for="name">Nombre:</label>
     <input type="text" id="name" name="name" placeholder="Nombre del remitente" required>
