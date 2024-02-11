@@ -7,9 +7,16 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   showContactForm: boolean = false;
-
+  showNotAvaible: boolean = false
   toggleContactForm(){
     this.showContactForm = !this.showContactForm;
   }
-
+  toggleShowNotAvaible(){
+    this.showNotAvaible = !this.showNotAvaible;
+    if (this.showNotAvaible) {
+      setTimeout(() => {
+        this.showNotAvaible = false;
+      }, 3000);
+    }
+  }
 }
