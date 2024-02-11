@@ -5,7 +5,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
   animations: [
-    trigger('aparicion-titles',[
+    trigger('aparicion-titles-projects',[
       state('hidden', style({
         opacity: 0,
         transform: 'scale(0.6)'
@@ -14,9 +14,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         opacity: 1,
         transform: 'scale(1)'
       })),
-      transition('hidden => visible', animate('3.5s ease-in')),
+      transition('hidden => visible', animate('2.5s ease-in')),
     ]),
-    trigger('aparicion-images', [
+    trigger('aparicion-images-projects', [
       state('hidden', style({
         opacity: 0.2,
         transform: 'scale(0.2)'
@@ -25,12 +25,12 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         opacity: 1,
         transform: 'scale(1)'
       })),
-      transition('hidden => visible', animate('3.5s ease-in')),
+      transition('hidden => visible', animate('3s ease-in')),
     ]),
   ]
 })
 export class ProjectsComponent {
-  state = 'hidden';
+  state_projects = 'hidden';
   // sectionOffsetTop = 0;
   // constructor(private el: ElementRef) {}
 
@@ -43,7 +43,7 @@ export class ProjectsComponent {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     const scrollThreshold = 50;
     if (scrollPosition > scrollThreshold) {
-      this.state = 'visible';
+      this.state_projects = 'visible';
     }
   }
 }
