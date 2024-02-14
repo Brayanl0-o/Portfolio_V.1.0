@@ -81,28 +81,22 @@
 } */
 
 .slider-height-padding {
-  padding-top: 500px;
+  padding-top: 450px;
   display: flex;
-  flex-flow: row nowrap;
+  justify-content: center;
+  margin: auto;
+  /* flex-flow: row nowrap;
   height: max-content;
   padding-bottom:10px;
-  justify-content: center;
   position: relative;
   width: 80%;
-  margin: auto;
   margin-top: 2%;
-  font-family: 'Poppins', sans-serif;
-/*
-  animation-name:  aparicion;
-  animation-duration:5s;
-  animation-delay: 1.5;
-  animation-fill-mode: forwards; */
-
+  font-family: 'Poppins', sans-serif; */
 }
 
 ul {
   position: absolute;
-  top: 0;
+  top: 2%;
   left: 0;
   display: block;
   width: 100%;
