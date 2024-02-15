@@ -4,7 +4,6 @@
   width: 80%;
   margin: auto;
   margin-top: 5%;
-  /* display: block; */
 }
 .section>h3 {
   font-size: 3rem;
@@ -56,7 +55,6 @@
 .checkbox.five + label{
   background-image: url('../../../assets/images/slider-images/deezerCopy.png');
 }
-
 .checkbox:checked + label{
   box-shadow: 0 8px 25px 0 rgba(16,39,112,.3);
   transform: scale(1.3);
@@ -73,21 +71,12 @@
   70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; }
   84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
 }
-
-/* @keyframes aparicion{
-  0%{opacity:0; transform:scale(0.5) ;}
-  50%{opacity:0.5;}
-  100%{opacity:1;transform:scale(1)}
-} */
-
 .slider-height-padding {
   padding-top: 450px;
   display: flex;
   justify-content: center;
   margin: auto;
-
 }
-
 ul {
   position: absolute;
   top: 2%;
@@ -98,9 +87,6 @@ ul {
   margin: 0;
   list-style: none;
   background-color: #343434;
-  /* animation-name:  aparicion;
-  animation-duration: 6s;
-  animation-fill-mode: forwards; */
 
 }
 ul li {
@@ -126,13 +112,11 @@ ul li {
   letter-spacing: 2px;
   line-height: 2.7;
   color: #343434;
-  /* writing-mode: vertical-rl; */
   opacity: 0;
   pointer-events: none;
   box-shadow: 0 8px 25px 0 rgba(16,39,112,.1);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-
 }
 ul li a{
   display: flex;
@@ -154,21 +138,7 @@ ul li a .name-project {
   background-color: rgba(92, 90, 90, 0.815);
   writing-mode: vertical-lr;
   mix-blend-mode: difference;
-
 }
-
-/* ul li a span:nth-child(2){
-  position: absolute;
-  right: 8px;
-  top:1%;
-  border-radius: 50px;
-  padding: 4px;
-  border: 0px solid #343434;
-  background-color: rgba(92, 90, 90, 0.815);
-  mix-blend-mode: difference;
-  writing-mode: horizontal-tb;
-  font-size: 2rem;
-} */
 .info{
   position: absolute;
   right:8px;
@@ -192,13 +162,6 @@ ul li a .name-project {
   padding: 10px;
   width: max-content;
 }
-
-/* .content-info{
-  display: flex;
-  justify-content: center;
-  flex-flow: column wrap;
-  align-items: center;
-} */
 .content-info>p:first-child,
 .content-info>p:nth-child(2) {
   display: flex;
@@ -230,13 +193,7 @@ ul li a .name-project {
   width: min-content;
   height: min-content;
   text-decoration: none;
-  /* background-color: #343434; */
 }
-/* .content-info>p>a>img{
-  width:20px;
-  height: 10%;
-  z-index: 100;
-} */
 ul li:nth-child(2) {
   background-image: url('../../../assets/images/slider-images/referencesForoPacto/login.png');
 }
@@ -248,9 +205,7 @@ ul li:nth-child(4) {
 }
 ul li:nth-child(5) {
   background-image: url('../../../assets/images/slider-images/deezerCopy.png');
-
 }
-
 .checkbox.frst:checked ~ ul li:nth-child(1) {
   opacity: 1;
   pointer-events: auto;
@@ -282,7 +237,6 @@ ul li:nth-child(5) {
     width: 90%;
     margin-top:9%;
     margin-bottom:10%;
-    /* display: block; */
   }
 }
 @media (max-width:887px) {
@@ -293,7 +247,6 @@ ul li:nth-child(5) {
   .section{
     width: 100%;
     margin-top:10%;
-    /* display: block; */
   }
   ul li {
     height: 60vh;
@@ -304,7 +257,6 @@ ul li:nth-child(5) {
   ul li a{
     width: auto;
     height:60vh;
-    /* background-color: rgba(209, 0, 0, 0.13); */
   }
   .checkbox:checked + label,
   .checkbox:not(:checked) + label{
@@ -334,7 +286,6 @@ ul li:nth-child(5) {
   ul li a{
     width: auto;
     height: 70vh;
-    /* background-color: rgba(209, 0, 0, 0.13); */
   }
   .checkbox:checked + label,
   .checkbox:not(:checked) + label{
@@ -342,8 +293,6 @@ ul li:nth-child(5) {
     margin-left: 5px;
   }
 }
-
-
 /*
 .logo {
 	position: absolute;
