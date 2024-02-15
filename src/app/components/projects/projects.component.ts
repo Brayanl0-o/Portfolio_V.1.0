@@ -19,13 +19,13 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     trigger('aparicion-images-projects', [
       state('hidden', style({
         opacity: 0.2,
-        transform: 'scale(0.2)'
+        transform: 'scale(0.7)'
       })),
       state('visible', style({
         opacity: 1,
         transform: 'scale(1)'
       })),
-      transition('hidden => visible', animate('3s ease-in')),
+      transition('hidden => visible', animate('1.5s ease-in')),
     ]),
   ]
 })
@@ -37,6 +37,13 @@ export class ProjectsComponent {
   // ngOnInit() {
   //   this.sectionOffsetTop = this.el.nativeElement.offsetTop;
   // }
+
+  showDetailsProject: boolean =  false;
+
+  toggleShowDetails(event: Event){
+    event.stopPropagation();
+    this.showDetailsProject = !this.showDetailsProject;
+  }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
