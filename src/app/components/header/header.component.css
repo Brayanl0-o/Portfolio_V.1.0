@@ -12,7 +12,6 @@ nav>ul>li{
   border-radius: 100%;
   padding: 5px;
   transition: all 1.3s ease;
-
 }
 nav>ul,
 nav>ul>li>a {
@@ -28,7 +27,6 @@ nav>ul>li>a {
   font-size: 1.7rem;
   font-weight: 500;
 }
-
 nav>ul>li:hover {
   border-radius: 100%;
   transform: scale3d(1.2, 1.2, 4);
@@ -41,12 +39,11 @@ nav>ul>li:hover {
 @media(max-width: 1250px) {
   .elemento-flotante ul > li:nth-child(1) > a {
     background-blend-mode: difference;
-    background-color: #f0f0f0d3; /* Establece el color de fondo deseado */
+    background-color: #f0f0f0d3;
     color: #000;
     font-weight: 600;
     border-radius: 100%;
     padding: 15px 5px 15px 5px;
-
   }
 }
 @media(max-width: 950px) {
@@ -56,23 +53,15 @@ nav>ul>li:hover {
   nav {
     display: none;
   }
-
 }
 @media (max-width: 768px) {
   .logo {
     display: none;
     background-color: red;
   }
-
   .container-wraper{
     display:flex;
   }
-  /* nav>ul>li>a {
-    text-align: center;
-    font-size: 1rem;
-    color: #dbdbdbfd;
-    gap: 1.2rem;
-  } */
 }
 
 
@@ -184,7 +173,6 @@ nav>ul>li:hover {
   position: absolute;
   content: "";
   background: #fff;
-   /* background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0); */
   background: linear-gradient(375deg, #1cc7d0, #2ede98);
   width: 104%;
   height: 110%;
