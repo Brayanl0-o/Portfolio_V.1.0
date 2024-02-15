@@ -2,11 +2,9 @@ section#cont-skills {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin: auto;
-  margin-top: 7%;
+  margin: 7% auto;
   width: 70%;
 }
-
 section#cont-skills>h2 {
   width: 100%;
   text-align: center;
@@ -14,7 +12,6 @@ section#cont-skills>h2 {
   margin-bottom: 8%;
   color:#bdc3c7;
 }
-
 section#cont-skills h3 {
   width: 100%;
   margin: auto;
@@ -26,7 +23,6 @@ section#cont-skills h3 {
   color: rgb(141, 81, 2);
   margin-bottom: 5%;
 }
-
 .backend-frontend,
 .databases-tools{
   display: flex;
@@ -34,13 +30,10 @@ section#cont-skills h3 {
   justify-content: space-between;
   width: 45%;
 }
-
 .tools,
 .frontend{
   margin-bottom:10%;
-
 }
-
 .images {
   display: flex;
   flex-flow: row wrap;
@@ -53,7 +46,6 @@ section#cont-skills h3 {
   animation-delay: 1.5;
   animation-fill-mode: forwards;
 }
-
 .images>img{
   border-radius: 100%;
   /* border: dashed 1px white; */
@@ -66,14 +58,12 @@ section#cont-skills h3 {
   min-height: 100px;
   max-height: 100px;
   border: 3px solid #bdc3c7;
-
   box-sizing: border-box;
   transition: all 1s ease;
   animation: border-transform 19s linear infinite alternate forwards;
   transform: scale(1.1);
   animation-play-state: running;
 }
-
 .images>img:hover{
   transform:scale(1.2);
   cursor: pointer;
@@ -101,22 +91,19 @@ section#cont-skills h3 {
 /* Mediaq querys */
 @media screen and (max-width:1500px){
   section#cont-skills {
-    margin-top: 7%;
-    margin-bottom: 15%;
-
+    margin: 7% 0 15% 0;
   }
   .tools{
     margin-bottom:25%;
   }
   .backend-frontend,
   .databases-tools{
-  display: flex;
-  flex-flow: column wrap;
-  justify-content:flex-start;
-  width: 45%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:flex-start;
+    width: 45%;
+  }
 }
-}
-
 @media screen and (max-width:1000px){
   .images>img{
     margin: 10px;
@@ -136,8 +123,7 @@ section#cont-skills h3 {
     width: auto;
   }
   section#cont-skills>h2 {
-    margin-top: 8%;
-    margin-bottom: 8%;
+    margin: 8% 0 8% 0;
     font-size: 2rem;
   }
   section#cont-skills h3 {
@@ -156,7 +142,6 @@ section#cont-skills h3 {
     max-height: 50px;
   }
 }
-
 @media(max-width: 580px) {
   .backend-frontend,
   .databases-tools{
@@ -181,17 +166,3 @@ section#cont-skills h3 {
     align-items: center;
   }
 }
-/* button {
-  background: none;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-
-} */
