@@ -85,13 +85,7 @@
   display: flex;
   justify-content: center;
   margin: auto;
-  /* flex-flow: row nowrap;
-  height: max-content;
-  padding-bottom:10px;
-  position: relative;
-  width: 80%;
-  margin-top: 2%;
-  font-family: 'Poppins', sans-serif; */
+
 }
 
 ul {
@@ -148,10 +142,10 @@ ul li a{
   height: 65vh;
   background-color: rgba(52, 52, 52, 0.13);
 }
-ul li span {
+ul li a .name-project {
   position: absolute;
   right: 5px;
-  top:5%;
+  top:8%;
   border-radius: 50px;
   height: max-content;
   padding-top: 10px;
@@ -163,6 +157,86 @@ ul li span {
 
 }
 
+/* ul li a span:nth-child(2){
+  position: absolute;
+  right: 8px;
+  top:1%;
+  border-radius: 50px;
+  padding: 4px;
+  border: 0px solid #343434;
+  background-color: rgba(92, 90, 90, 0.815);
+  mix-blend-mode: difference;
+  writing-mode: horizontal-tb;
+  font-size: 2rem;
+} */
+.info{
+  position: absolute;
+  right:8px;
+  top:1%;
+  border-radius: 50px;
+  padding: 4px;
+  border: 0px solid #343434;
+  background-color: rgba(92, 90, 90, 0.815);
+  mix-blend-mode: difference;
+  /* color: red; */
+  writing-mode: horizontal-tb;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.details{
+  background-color: rgba(22, 22, 22, 0.897);
+  position: absolute;
+  right: 5%;
+  top:2%;
+  border-radius: 10px;
+  padding: 10px;
+  width: max-content;
+}
+
+/* .content-info{
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+} */
+.content-info>p:first-child,
+.content-info>p:nth-child(2) {
+  display: flex;
+  gap: 5%;
+  flex-flow: row nowrap;
+  align-items: center;
+  color:#ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0px;
+  margin: 0;
+  /* background-color: red; */
+}
+.content-info>p:nth-child(3){
+  display: flex;
+  flex-flow: column;
+}
+.content-info>p:nth-child(3){
+ color: white;
+ font-size: 1.2rem;
+
+}
+.date{
+  mix-blend-mode: difference;
+}
+.content-info p a{
+  padding: 0px;
+  margin: 0;
+  width: min-content;
+  height: min-content;
+  text-decoration: none;
+  /* background-color: #343434; */
+}
+/* .content-info>p>a>img{
+  width:20px;
+  height: 10%;
+  z-index: 100;
+} */
 ul li:nth-child(2) {
   background-image: url('../../../assets/images/slider-images/referencesForoPacto/login.png');
 }
