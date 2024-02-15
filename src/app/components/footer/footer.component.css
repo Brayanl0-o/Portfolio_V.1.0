@@ -6,11 +6,9 @@
 }
 footer {
   width: auto;
-  margin: auto;
   height: auto;
+  margin:10% auto;
   padding: 10px;
-  margin-top: 10%;
-
 }
 footer>h4 {
   font-size: 4rem;
@@ -36,7 +34,6 @@ footer>ul>li{
   width: fit-content;
   cursor: pointer;
   padding: 0;
-
 }
 footer>ul>li>img,
 footer>ul>li>a>img{
@@ -114,7 +111,6 @@ textarea::before {
   width: fit-content;
   margin: auto;
   margin-top: 1%;
-
 }
 /* Media querys */
 @media(max-width: 1250px) {
@@ -137,10 +133,8 @@ textarea::before {
 @media(max-width: 650px) {
   footer>ul{
     flex-flow:column;
-
   }
   footer>ul>li{
-
     margin-bottom: 50%;
   }
   footer>ul>li:nth-child(1){
