@@ -40,17 +40,16 @@ export class ProjectsComponent {
 
   showDetailsProject: boolean =  false;
 
-  toggleShowDetails(event: Event){
-    event.stopPropagation();
+  toggleShowDetails(){
     this.showDetailsProject = !this.showDetailsProject;
   }
 
-  @HostListener('window:scroll', ['$event'])
-  checkScroll() {
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    const scrollThreshold = 50;
-    if (scrollPosition > scrollThreshold) {
-      this.state_projects = 'visible';
-    }
-  }
+  // @HostListener('window:scroll', ['$event'])
+  // checkScroll() {
+  //   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  //   const scrollThreshold = 50;
+  //   if (scrollPosition > scrollThreshold) {
+  //     this.state_projects = 'visible';
+  //   }
+  // }
 }
