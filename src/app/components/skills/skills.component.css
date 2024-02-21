@@ -41,10 +41,10 @@ section#cont-skills h3 {
   width: auto;
   justify-content: space-around ;
   align-items: center;
-  animation-name:  aparicion;
+  /* animation-name:  aparicion;
   animation-duration: 4s;
   animation-delay: 1.5;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
 .images>img{
   border-radius: 100%;
