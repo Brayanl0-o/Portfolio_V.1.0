@@ -99,7 +99,8 @@ textarea::before {
   background-image: url(../../../assets/images/general/galax.jpeg);
   transform: scale(1.1);
 }
-.NotAvaible{
+.NotAvaible,
+.sendSuccess{
   border: 1px solid rgb(15, 15, 15);
   border-radius: 10px;
   font-size: 2rem;

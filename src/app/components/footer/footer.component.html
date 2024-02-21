@@ -3,21 +3,24 @@
   <h4>Contacto</h4>
   <ul>
     <li><a href="https://wa.me/573227235454?text=Hola,%20estoy%20interesado%20en%20contactarte" target="_blank"><img src="../../../assets/images/contact-icons/whatssap_logo.png"  alt="Whatssap" loading="lazy"></a></li>
-    <li (click)="toggleShowNotAvaible()"><a href="mailto:brayantandap@gmail.com"><img src="../../../assets/images/contact-icons/email_logo.png" alt="Enviar email" loading="lazy"></a> </li>
-    <li><a  target="_blank" href="https://drive.google.com/file/d/1OUIha4Pe5CiD677qKiEdO_zN4EcdNO7H/view?usp=sharing"><img src="../../../assets/images/contact-icons/cv_logo.png"alt="Hoja de vida" loading="lazy"></a></li>
+    <li  (click)="toggleContactForm()" ><a href="mailto:brayantandap@gmail.com"><img src="../../../assets/images/contact-icons/email_logo.png" alt="Enviar email" loading="lazy"></a> </li>
+    <li><a target="_blank" href="https://drive.google.com/file/d/1OUIha4Pe5CiD677qKiEdO_zN4EcdNO7H/view?usp=sharing"><img src="../../../assets/images/contact-icons/cv_logo.png"alt="Hoja de vida" loading="lazy"></a></li>
   </ul>
     <!-- (click)="toggleContactForm()" -->
-  <div  class="NotAvaible" *ngIf="showNotAvaible">
+  <!-- <div  class="NotAvaible" *ngIf="showNotAvaible">
     No disponible por el momento.
+  </div> -->
+  <div  class="sendSuccess" *ngIf="sendSuccess">
+    Correo enviado correctamente
   </div>
-  <form action="get" *ngIf="showContactForm">
-    <label for="name">Nombre:</label>
-    <input type="text" id="name" name="name" placeholder="Nombre del remitente" required>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="Email" placeholder="ejemplo@gmail.com" required>
+  <form [formGroup]="contactForm" (ngSubmit)="onFormSubmit()" *ngIf="showContactForm">
+    <label for=" sendersName">Nombre:</label>
+    <input type="text" id=" sendersName" name="sendersName" formControlName="sendersName" placeholder="Nombre del remitente" required>
+    <label for="emailAddress">Email:</label>
+    <input type="email" id="emailAddress" name="emailAddress" formControlName="emailAddress" placeholder="ejemplo@gmail.com" required>
     <label for="message">Mensaje y razón de contacto:</label>
-    <textarea name="message" id="message" cols="6" rows="7" placeholder="Mensaje" required></textarea>
-    <button type="button" class="button-contact-send">Enviar</button>
+    <textarea name="message" formControlName="message" id="message" cols="6" rows="7" placeholder="Mensaje" required></textarea>
+    <button type="submit" class="button-contact-send">Enviar</button>
   </form>
 
 </footer>
