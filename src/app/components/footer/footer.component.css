@@ -96,7 +96,7 @@ textarea::before {
   font-size: 1.3rem;
 }
 .button-contact-send:hover {
-  background-image: url(../../../assets/images/general/galax.jpeg);
+  background-image: url(../../../assets/images/general/galax.webp);
   transform: scale(1.1);
 }
 .NotAvaible,
