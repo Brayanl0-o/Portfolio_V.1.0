@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { environment } from '../../environments/enviroment.prod';
 import { HttpClient} from '@angular/common/http';
 import { Form } from '@angular/forms';
@@ -12,6 +12,8 @@ export class ContactService {
   constructor(
     private http: HttpClient,
   ) { }
+
+  $modal = new EventEmitter<any>();
 
   sendInfoForm(emailData:any){
     const urlSendInfo = `${this.apiUrl}receiveForm/receive-form`
