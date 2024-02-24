@@ -1,7 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { environment } from '../../environments/enviroment.prod';
+import { environment } from '../../environments/environment';
 import { HttpClient} from '@angular/common/http';
-import { Form } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +13,7 @@ export class ContactService {
   ) { }
 
   $modal = new EventEmitter<any>();
+  $success_send = new EventEmitter<any>();
 
   sendInfoForm(emailData:any){
     const urlSendInfo = `${this.apiUrl}receiveForm/receive-form`
