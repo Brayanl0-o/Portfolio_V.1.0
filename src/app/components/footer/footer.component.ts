@@ -18,12 +18,16 @@ export class FooterComponent {
   showNotAvaible: boolean = false
   sendSuccess:boolean = false;
 
+  ngOnInit(){
+    this.contactService.$modal.subscribe((valu) => { this.showContactForm =valu })
+    this.contactService.$success_send.subscribe((valu) => { this.sendSuccess =valu })
+
+
+  }
   toggleContactForm(){
     this.showContactForm = !this.showContactForm;
     // this.renderer.setStyle(document.body, 'overflow', 'hidden');
   }
-  ngOnInit(){
-    this.contactService.$modal.subscribe((valu) => { this.showContactForm =valu })
-  }
+
 
 }

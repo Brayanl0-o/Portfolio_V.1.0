@@ -3,10 +3,10 @@
   <h4>Contacto</h4>
   <ul>
     <li><a href="https://wa.me/573227235454?text=Hola,%20estoy%20interesado%20en%20contactarte" target="_blank"><img src="../../../assets/images/contact-icons/whatssap_logo.webp"  alt="Whatssap" loading="lazy"></a></li>
-    <li  (click)="toggleContactForm()" ><a href="mailto:brayantandap@gmail.com"><img src="../../../assets/images/contact-icons/email_logo.webp" alt="Enviar email" loading="lazy"></a> </li>
+    <li  (click)="toggleContactForm()" ><img src="../../../assets/images/contact-icons/email_logo.webp" alt="Enviar email" loading="lazy"></li>
     <li><a target="_blank" href="https://drive.google.com/file/d/1OUIha4Pe5CiD677qKiEdO_zN4EcdNO7H/view?usp=sharing"><img src="../../../assets/images/contact-icons/cv_logo.webp"alt="Hoja de vida" loading="lazy"></a></li>
   </ul>
-  <div  class="sendSuccess" *ngIf="sendSuccess">
+  <div class="sendSuccess" *ngIf="sendSuccess">
     Correo enviado correctamente
   </div>
   <div class="form-contact" *ngIf="showContactForm">
