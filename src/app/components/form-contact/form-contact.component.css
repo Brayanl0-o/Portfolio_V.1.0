@@ -130,6 +130,11 @@ form>textarea {
   transform: scale(1.1);
   background-color: black;
 }
+.loading{
+  width: 30px;
+  height: 30px;
+}
+
 /* Media querys */
 @media(max-width: 1250px) {
   section {

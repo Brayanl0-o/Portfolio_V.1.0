@@ -16,8 +16,8 @@ export class FormContactComponent {
     errorResponseMessageForm = '';
     showContactForm: boolean = false;
     showNotAvaible: boolean = false
-    sendSuccess:boolean = false;
     showDetailsProject: boolean =  false;
+    isLoading: boolean = false;
 
     toggleShowDetails(){
       this.showDetailsProject = !this.showDetailsProject;
@@ -27,12 +27,15 @@ export class FormContactComponent {
       // this.renderer.removeStyle(document.body, 'overflow');
       this.contactService.$modal.emit(false)
     }
+
     ngOnInit(){
       this.contactForm = this.initForm();
     }
     onFormSubmit(){
       if (this.contactForm.valid) {
+        this.isLoading = true;
         this.sendForm();
+
       } else {
         this.errorResponseMessageForm = 'Verifique el formulario!';
           setTimeout(() => {
@@ -43,12 +46,15 @@ export class FormContactComponent {
     sendForm(){
       if(this.contactForm.valid){
         const emailData = this.contactForm.value;
-
         this.contactService.sendInfoForm(emailData).subscribe((response) =>{
-          this.showContactForm = false;
-          this.sendSuccess = true;
+          this.closeModal()
+          this.contactService.$success_send.emit(true)
+          setTimeout(() => {
+            this.contactService.$success_send.emit(false);
+          }, 5000);
         },
         (error)=> {
+          this.isLoading = false;
           console.error('Error send form', error);
         }
         )
@@ -62,12 +68,5 @@ export class FormContactComponent {
         message:['', [Validators.required, Validators.minLength(8),Validators.maxLength(600)]],
       })
     }
-    toggleShowNotAvaible(){
-      this.showNotAvaible = !this.showNotAvaible;
-      if (this.showNotAvaible) {
-        setTimeout(() => {
-          this.showNotAvaible = false;
-        }, 3000);
-      }
-    }
+
 }
