@@ -130,11 +130,39 @@ form>textarea {
   transform: scale(1.1);
   background-color: black;
 }
+.cont-circle,
+.alert{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.alert>.material-symbols-outlined{
+  color: red;
+}
+.circle{
+  display: inline;
+  width: 2rem;
+  height: 2rem;
+  margin: auto;
+  animation: spin 1s linear infinite;
+  color: #ffffff;
+  fill: #3182ce;
+}
+.alert{
+  color: white;
+  font-size: x-large;
+  margin-top: 10px;
+}
 .loading{
   width: 30px;
   height: 30px;
 }
-
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* Media querys */
 @media(max-width: 1250px) {
   section {
