@@ -1,4 +1,4 @@
-import { Component, Renderer2 } from '@angular/core';
+import {  Component, Renderer2 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from 'src/app/services/contact.service';
 
@@ -13,7 +13,7 @@ export class FormContactComponent {
     private fb:FormBuilder){}
 
     contactForm!: FormGroup;
-    errorResponseMessageForm = '';
+    errorResponseMessageForm: string | null = null;
     showContactForm: boolean = false;
     showNotAvaible: boolean = false
     showDetailsProject: boolean =  false;
@@ -31,42 +31,55 @@ export class FormContactComponent {
     ngOnInit(){
       this.contactForm = this.initForm();
     }
-    onFormSubmit(){
-      if (this.contactForm.valid) {
-        this.isLoading = true;
-        this.sendForm();
 
-      } else {
-        this.errorResponseMessageForm = 'Verifique el formulario!';
-          setTimeout(() => {
-            this.errorResponseMessageForm = '';
-          }, 5000);
-      }
-    }
     sendForm(){
+      this.isLoading = true;
+
       if(this.contactForm.valid){
         const emailData = this.contactForm.value;
         this.contactService.sendInfoForm(emailData).subscribe((response) =>{
           this.closeModal()
+          this.isLoading = false;
+
           this.contactService.$success_send.emit(true)
           setTimeout(() => {
             this.contactService.$success_send.emit(false);
           }, 5000);
         },
-        (error)=> {
+        (err)=> {
+          console.error('Error send form', err);
           this.isLoading = false;
-          console.error('Error send form', error);
-        }
-        )
+
+        })
+      }else{
+        this.errorResponseMessageForm = 'Falta un campo!';
+        this.isLoading = false;
+
+        setTimeout(() => {
+          this.errorResponseMessageForm = null;
+        }, 5000);
+
       }
     }
     initForm(): FormGroup{
       return this.fb.group({
-        sendersName: ['', [Validators.required, Validators.minLength(4),Validators.maxLength(80)]],
-        emailAddress:['', [Validators.required, Validators.minLength(8),Validators.maxLength(90)]],
-        // phoneNumber:['', [Validators.maxLength(20)]],
-        message:['', [Validators.required, Validators.minLength(8),Validators.maxLength(600)]],
+        sendersName: ['', [Validators.required, Validators.minLength(4),Validators.maxLength(80),Validators.pattern('[A-Za-z\\s]+')]],
+        emailAddress:['', [Validators.required, Validators.minLength(8),Validators.maxLength(90),Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
+        message:['', [Validators.required, Validators.minLength(8),Validators.maxLength(600),Validators.pattern('[A-Za-z\\s]+')]],
       })
     }
 
 }
+  // onFormSubmit(){
+    //   this.isLoading = true;
+
+    //   if (this.contactForm.valid) {
+    //     this.sendForm();
+
+    //   } else {
+    //     this.errorResponseMessageForm = 'Verifique el formulario!';
+    //       setTimeout(() => {
+    //         this.errorResponseMessageForm = '';
+    //       }, 5000);
+    //   }
+    // }
