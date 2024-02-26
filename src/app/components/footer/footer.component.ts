@@ -1,11 +1,13 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Renderer2,ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.css'],
+  // encapsulation: ViewEncapsulation.Emulated
+
 })
 export class FooterComponent {
   constructor(private contactService: ContactService,
@@ -14,7 +16,7 @@ export class FooterComponent {
 
   contactForm!: FormGroup;
   errorResponseMessageForm = '';
-  showContactForm: boolean = false;
+  showContactForm: boolean = true;
   showNotAvaible: boolean = false
   sendSuccess:boolean = false;
 
