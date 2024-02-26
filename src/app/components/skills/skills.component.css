@@ -1,18 +1,18 @@
-section#cont-skills {
+#cont-skills {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   margin: 7% auto 15% auto;
   width: 70%;
 }
-section#cont-skills>h2 {
+#cont-skills>h2 {
   width: 100%;
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 8%;
   color:#bdc3c7;
 }
-section#cont-skills h3 {
+#cont-skills h3 {
   width: 100%;
   padding: 5px 0px 5px 0px;
   text-align: center;
@@ -103,15 +103,15 @@ section#cont-skills h3 {
   }
 }
 @media (max-width: 798px) {
-  section#skills {
+  #skills {
     flex-flow: column nowrap;
     padding: 10px;
   }
-  section#cont-skills>h2 {
+  #cont-skills>h2 {
     margin: 8% 0 8% 0;
     font-size: 2rem;
   }
-  section#cont-skills h3 {
+  #cont-skills h3 {
     font-size: 1.4rem;
     margin-bottom: 10%;
   }
