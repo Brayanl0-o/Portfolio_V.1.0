@@ -1,23 +1,27 @@
 /* container main */
-section{
-  position: absolute;
-  inset: 0;
-  margin-top: 50px;
+.form-contact{
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
   height: fit-content;
   background-color: #000231;
   border:2px solid gray;
-  border-radius: 50px;
-  padding: 10px;
-  width: 40%;
+  border-bottom: 0;
+  border-radius: 50px 50px 0px 0px;
+  width: fit-content;
+  margin: auto;
+  z-index: 100;
+  /* padding-inline: 20px; */
+  animation: slide-up 0.3s forwards;
 }
-section>h4{
+.form-contact>h4{
   text-align: center;
-  font-size: calc(1em + 2vw);
+  font-size: calc(1.1em + 0.7vw);
   border-bottom: 5px rgba(204, 133, 0, 0.795) solid;
-  padding: 10px;
   color: #bbbbce;
   width: max-content;
   margin: auto;
+  padding: 15px 60px 15px 60px;
 }
 /* Button close */
 .close {
@@ -36,7 +40,7 @@ section>h4{
   color: black;
 }
 /* Button more info */
-.info{
+.info-form-contact{
   position: absolute;
   left: 3%;
   top: 4%;
@@ -46,11 +50,11 @@ section>h4{
   mix-blend-mode:difference;
   color: rgba(181, 199, 24, 0.911);
   writing-mode: horizontal-tb;
-  font-size: calc(1em + 1.5vw);
+  font-size: calc(1em + 1vw);
   cursor: pointer;
   width: min-content;
 }
-.details{
+.details-form-contact{
   background-color: rgba(0, 0, 0, 0.884);
   position: absolute;
   left:10%;
@@ -86,23 +90,30 @@ form {
   padding: 20px;
   color: #ececec;
 }
-form>label {
+form>label,
+form>.labels-form>label {
   font-size: calc(1em + 0.7vw);
   margin:1rem 0rem 0.8rem 0rem;
   font-weight: 700;
 }
-form>input,
+form>.labels-form>input,
 textarea {
   background: rgba(128, 128, 128, 0.514);
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
-form>input {
-  height: 3rem;
+form>.labels-form:nth-child(2)>input{
+  margin-left: 4px;
+  font-size: 1.4rem;
+}
+form>.labels-form>input {
+  height: 2rem;
+  width: auto;
+  margin: 2% 0% 5% 0%;
 }
 form>textarea {
-  height: 10rem;
+  height:6rem;
 }
-form>input::placeholder,
+form>.labels-form>input::placeholder,
 textarea::placeholder {
   font-weight: 600;
   background: none;
@@ -137,9 +148,6 @@ form>textarea {
   justify-content: center;
   align-items: center;
 }
-.alert>.material-symbols-outlined{
-  color: red;
-}
 .circle{
   display: inline;
   width: 2rem;
@@ -154,9 +162,43 @@ form>textarea {
   font-size: x-large;
   margin-top: 10px;
 }
-.loading{
-  width: 30px;
-  height: 30px;
+.alert>.material-symbols-outlined{
+  color: red;
+}
+custom-snackbar-slider {
+  animation: slide-in-top 2s;
+}
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+    0% {
+      transform: translateY(100%);
+      animation-timing-function: ease-out;
+    }
+    25% {
+      transform: translateY(-30px);
+      animation-timing-function: ease-in;
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    75% {
+      transform: translateY(-15px);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
 }
 @keyframes spin {
   to {
@@ -165,26 +207,42 @@ form>textarea {
 }
 /* Media querys */
 @media(max-width: 1250px) {
-  section {
+  /* .form-contact {
     width: 60%;
-  }
+  } */
 }
 @media(max-width: 768px) {
-  section{
+  .form-contact{
     width: 80%;
     margin-top: 15%;
   }
 }
 @media(max-width: 425px) {
-  section{
-    width: auto;
+  .form-contact{
+    width: 95%;
     margin-top: 25%;
+
   }
-  section>h4{
-    width: 70%;
+  .form-contact>h4{
+    padding: 10px 40px 10px 40px;
+    width: 60%;
+
   }
   form {
     width: 100%;
     padding: 0px;
+  }
+  form>.labels-form:first-child{
+    margin-top: 25px;
+  }
+  form>.labels-form>input{
+    width: 90%;
+  }
+  form>.labels-form:nth-child(2)>input{
+    margin-left: 0px;
+    width: 90%;
+  }
+  form>textarea{
+    width: 90%;
   }
 }
