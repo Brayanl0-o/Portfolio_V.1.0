@@ -1,0 +1,14 @@
+.custom-snackbar {
+  border: 1px solid rgb(15, 15, 15);
+  border-radius: 10px;
+  font-size: 20px;
+  color: #000231;
+  font-weight: bold;
+  background-color: #1a274167;
+  padding: 10px 20px;
+  background-color: #1a274167;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+
+}
