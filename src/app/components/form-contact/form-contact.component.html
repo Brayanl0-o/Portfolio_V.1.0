@@ -1,13 +1,13 @@
-<section>
+<section class="form-contact">
   <h4>Formulario de Contacto</h4>
   <span (click)="closeModal()" class="close material-symbols-outlined">
     close
   </span>
-  <span  (click)="toggleShowDetails()" class="info material-symbols-outlined">
+  <span  (click)="toggleShowDetails()" class="info-form-contact material-symbols-outlined">
     help
   </span>
   <a href="https://github.com/Brayanl0-o/books_Haven" target="_blank">
-    <div class="details" *ngIf="showDetailsProject">
+    <div class="details-form-contact" *ngIf="showDetailsProject">
       <div class="content-info">
         <p>API: <a href="https://github.com/Brayanl0-o/email_API" target="_blank"><img src="../../../assets/images/projects/repo-front.png" width="30" height="30" alt="Repositorio Frontend"></a></p>
         <p> Formulario conectado a una API hecha en node-express <br>
@@ -16,8 +16,11 @@
     </div>
   </a>
   <form [formGroup]="contactForm" (ngSubmit)="sendForm()" >
-    <label for=" sendersName">Nombre:</label>
-    <input type="text" id=" sendersName" name="sendersName" formControlName="sendersName" placeholder="Nombre del remitente" required>
+    <div class="labels-form">
+      <label for="sendersName">Nombre:</label>
+      <input type="text" id=" sendersName" name="sendersName" formControlName="sendersName" placeholder="Nombre del remitente" required>
+    </div>
+
     <div *ngIf="contactForm.controls['sendersName'].invalid && (contactForm.controls['sendersName'].dirty || contactForm.controls['sendersName'].touched)">
       <div *ngIf="contactForm.controls['sendersName'].errors?.['required']" class="alert">
         Este campo es requerido. <mat-icon class="material-symbols-outlined" > warning </mat-icon>
@@ -33,8 +36,11 @@
       </div>
     </div>
 
-    <label for="emailAddress">Email:</label>
-    <input type="email" id="emailAddress" name="emailAddress" formControlName="emailAddress" placeholder="ejemplo@gmail.com" required>
+    <div class="labels-form">
+      <label for="emailAddress">Email:</label>
+      <input type="email" id="emailAddress" name="emailAddress" formControlName="emailAddress" placeholder="ejemplo@gmail.com" required>
+    </div>
+
     <div *ngIf="contactForm.controls['emailAddress'].invalid && (contactForm.controls['emailAddress'].dirty || contactForm.controls['emailAddress'].touched)">
       <div *ngIf="contactForm.controls['emailAddress'].errors?.['required']" class="alert">
         Este campo es requerido. <mat-icon class="material-symbols-outlined" > warning </mat-icon>
@@ -49,7 +55,10 @@
         Este campo solo permite correos.<mat-icon class="material-symbols-outlined"> warning </mat-icon>
       </div>
     </div>
+<!--
+    <div class="labels-form">
 
+    </div> -->
     <label for="message">Mensaje y razón de contacto:</label>
     <textarea name="message" formControlName="message" id="message" cols="6" rows="7" placeholder="Mensaje" required></textarea>
     <div *ngIf="contactForm.controls['message'].invalid && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)">
