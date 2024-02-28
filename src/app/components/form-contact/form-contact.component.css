@@ -142,7 +142,8 @@ form>textarea {
   background-color: black;
 }
 .cont-circle,
-.alert{
+.alert,
+.alert-end{
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -157,16 +158,24 @@ form>textarea {
   color: #ffffff;
   fill: #3182ce;
 }
-.alert{
+.alert,.alert-end{
   color: white;
   font-size: x-large;
-  margin-top: 10px;
+  margin-top: 2px;
 }
-.alert>.material-symbols-outlined{
+.alert-end{
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+.alert>.material-symbols-outlined,
+.alert-end>.material-symbols-outlined{
   color: red;
 }
-custom-snackbar-slider {
-  animation: slide-in-top 2s;
+.form-contact{
+  animation: slide-up 1s forwards;
+  margin-left: 10px;
+
 }
 @keyframes slide-up {
   from {
