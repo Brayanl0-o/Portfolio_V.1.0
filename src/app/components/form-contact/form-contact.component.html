@@ -94,8 +94,10 @@
       </div>
     </button>
      <!-- Alert message -->
-     <div *ngIf="errorResponseMessageForm" class="alert">
-     {{ errorResponseMessageForm }}<mat-icon class="material-symbols-outlined"> warning </mat-icon>
+     <div *ngIf="errorResponseMessageForm" class="alert-end">
+      <div>{{ errorResponseMessageForm.split('\n')[0] }}</div>
+      <div>{{ errorResponseMessageForm.split('\n')[1] }}</div>
+      <mat-icon class="material-symbols-outlined"> warning </mat-icon>
      </div>
   </form>
 
