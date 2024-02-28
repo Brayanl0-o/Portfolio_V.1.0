@@ -78,7 +78,11 @@
 
     <button type="submit" class="button-contact-send" [disabled]="isLoading">
       <div>
-        <span *ngIf="!isLoading" aria-label="Botón de Iniciar sesión">Enviar</span>
+        <span *ngIf="!isLoading" aria-label="Botón de Iniciar sesión">
+          <span class="material-symbols-outlined">
+            send
+          </span>
+        </span>
       </div>
       <div class="text-left" *ngIf="isLoading">
         <div role="status" class="cont-circle">
