@@ -6,14 +6,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon'
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './components/common/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FormContactComponent } from './components/form-contact/form-contact.component';
+import { FormContactComponent } from './components/common/form-contact/form-contact.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { CustomSnackbarComponent } from './components/custom-snackbar/custom-snackbar.component'
+import { CustomSnackbarComponent } from './components/common/custom-snackbar/custom-snackbar.component'
 
 @NgModule({
   declarations: [
