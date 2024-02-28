@@ -19,9 +19,6 @@ export class AppComponent {
 
   ngOnInit(){
     this.contactService.$modal.subscribe((valu) => { this.showContactForm =valu })
-    this.contactService.$success_send.subscribe((valu) => { this.sendSuccess =valu })
-
-
   }
   toggleContactForm(){
    this.contactService.$modal.emit(false);
