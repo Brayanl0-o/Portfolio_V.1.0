@@ -16,7 +16,7 @@ export class FooterComponent {
 
   contactForm!: FormGroup;
   errorResponseMessageForm = '';
-  showContactForm: boolean = true;
+  showContactForm: boolean = false;
   showNotAvaible: boolean = false
   sendSuccess:boolean = false;
 
@@ -27,8 +27,11 @@ export class FooterComponent {
 
   }
   toggleContactForm(){
-    this.showContactForm = !this.showContactForm;
-    // this.renderer.setStyle(document.body, 'overflow', 'hidden');
+    this.contactService.$modal.emit(false);
+
+    setTimeout(() => {
+      this.contactService.$modal.emit(true);
+    }, 100);
   }
 
 
