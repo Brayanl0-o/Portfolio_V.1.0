@@ -9,5 +9,8 @@ import { MAT_SNACK_BAR_DATA } from '@angular/material/snack-bar';
 export class CustomSnackbarComponent {
   constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any) {}
 
+  get backgroundStyle() {
+    return { background: this.data.background };
+  }
 }
 
