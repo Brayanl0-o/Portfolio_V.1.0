@@ -1,3 +1,4 @@
-<div class="custom-snackbar">
-  {{ data.message }}
+<div class="custom-snackbar" [ngStyle]="backgroundStyle">
+ <div class="first-p"> {{ data.message.split('\n') [0] }}</div>
+ <div class="second-p"> {{ data.message.split('\n') [1] }}</div>
 </div>
