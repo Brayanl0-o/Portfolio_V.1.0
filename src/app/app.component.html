@@ -11,3 +11,12 @@
 <div class="background-low">
   <app-footer></app-footer>
 </div>
+
+<div class="contact-tool" (click)="toggleContactForm()">
+  <mat-icon  class="material-symbols-outlined">
+      contacts
+  </mat-icon>
+</div>
+<div class="form-contact" *ngIf="showContactForm">
+  <app-form-contact></app-form-contact>
+</div>
