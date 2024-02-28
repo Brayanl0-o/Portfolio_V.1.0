@@ -27,22 +27,17 @@ export class FormContactComponent {
       const config = new MatSnackBarConfig();
       config.duration = 8000;
       config.horizontalPosition = 'center';
-      config.verticalPosition = 'top'; // Posición en la parte superior
-      config.panelClass = ['custom-snackbar-slider'];
+      config.verticalPosition = 'bottom';
 
-      // Personalización del estilo del texto
       config.data = {
-        message: '¡Formulario enviado con éxito! Pronto me contactaré contigo.',
-        fontSize: '20px',
-        fontWeight: 'bold',
-        color: '#000231',
+        message: '¡Formulario enviado con éxito! \n Pronto me contactaré contigo.',
+        // background: '#0052f5'
       };
       this.snackBar.openFromComponent(CustomSnackbarComponent, {
-        data: config.data, // Pasa los datos al componente del snackbar
-        duration: config.duration, // Duración del snackbar
-        horizontalPosition: config.horizontalPosition, // Posición horizontal
-        verticalPosition: config.verticalPosition, // Posición vertical
-        panelClass: config.panelClass // Clase de estilo personalizado
+        data: config.data,
+        duration: config.duration,
+        horizontalPosition: config.horizontalPosition,
+        verticalPosition: config.verticalPosition,
       });
     }
     ngOnInit(){
@@ -57,7 +52,7 @@ export class FormContactComponent {
         this.contactService.sendInfoForm(emailData).subscribe((response) =>{
           this.closeModal()
           this.isLoading = false;
-
+          this.openSnackBar()
           // this.contactService.$success_send.emit(true)
           // setTimeout(() => {
           //   this.contactService.$success_send.emit(false);
@@ -65,8 +60,12 @@ export class FormContactComponent {
         },
         (err)=> {
           console.error('Error send form', err);
-          this.errorResponseMessageForm = '¡Error del servidor! Vuelve a intentarlo mas tarde.';
+          this.errorResponseMessageForm = '¡Error del servidor! \n Vuelve a intentarlo mas tarde.';
           this.isLoading = false;
+          setTimeout(() => {
+            this.errorResponseMessageForm = null;
+          }, 5000);
+
 
         })
       }else{
