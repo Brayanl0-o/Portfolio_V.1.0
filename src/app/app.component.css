@@ -32,7 +32,21 @@
   background-position: center center;
   height: 1080px;
 }
+.contact-tool{
+  z-index: 1000;
+  position: fixed;
+  bottom: 2%;
+  right: 20px;
+  cursor: pointer;
+}
+.material-symbols-outlined{
+  font-size: 6rem;
+  width: fit-content;
+  height: fit-content;
+  color: rgba(131, 20, 20, 0.664);
+  mix-blend-mode: difference;
 
+}
 /* Media querys */
 /* @media screen and (max-width:1110px) {
   .background-sup {
