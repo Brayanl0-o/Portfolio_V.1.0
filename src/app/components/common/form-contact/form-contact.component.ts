@@ -22,7 +22,14 @@ export class FormContactComponent {
     showNotAvaible: boolean = false
     showDetailsProject: boolean =  false;
     isLoading: boolean = false;
+    messageAlert: boolean = false;
 
+    showMessageAlert(){
+        this.messageAlert = true;
+    }
+    hiddeMessageAlert(){
+      this.messageAlert = false;
+    }
     openSnackBar(){
       const config = new MatSnackBarConfig();
       config.duration = 8000;
