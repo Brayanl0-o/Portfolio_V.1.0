@@ -16,45 +16,55 @@
     </div>
   </a>
   <form [formGroup]="contactForm" (ngSubmit)="sendForm()" >
-    <div class="labels-form">
+    <div class="labels-form" >
       <label for="sendersName">Nombre:</label>
-      <input type="text" id=" sendersName" name="sendersName" formControlName="sendersName" placeholder="Nombre del remitente" required>
+
+
+      <div class="input-alert">
+        <input type="text" id="sendersName" name="sendersName" formControlName="sendersName" placeholder="Nombre del remitente" required>
+        <div *ngIf="contactForm.controls['sendersName'].invalid && (contactForm.controls['sendersName'].dirty || contactForm.controls['sendersName'].touched)">
+          <div *ngIf="contactForm.controls['sendersName'].errors?.['required']" class="alert" (mouseout)="hiddeMessageAlert()">
+             <mat-icon (mouseover)="showMessageAlert()" class="material-symbols-outlined"> warning </mat-icon><span *ngIf="messageAlert">Este campo es requerido.</span>
+          </div>
+          <div *ngIf="contactForm.controls['sendersName'].errors?.['minlength']" class="alert" (mouseout)="hiddeMessageAlert()">
+             <mat-icon (mouseover)="showMessageAlert()"  class="material-symbols-outlined"> warning </mat-icon><span *ngIf="messageAlert">Minimo 4 caracteres.</span>
+          </div>
+          <div *ngIf="contactForm.controls['sendersName'].errors?.['maxlength']" class="alert" (mouseover)="showMessageAlert()">
+              <mat-icon (mouseover)="showMessageAlert()"  class="material-symbols-outlined"> warning </mat-icon><span *ngIf="messageAlert">Superó el limite de caracteres permitidos(80). </span>
+          </div>
+          <div *ngIf="contactForm.controls['sendersName'].errors?.['pattern']" class="alert" (mouseout)="hiddeMessageAlert()">
+            <mat-icon (mouseover)="showMessageAlert()"  class="material-symbols-outlined"> warning </mat-icon><span *ngIf="messageAlert">No se admiten caracteres especiales. </span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div *ngIf="contactForm.controls['sendersName'].invalid && (contactForm.controls['sendersName'].dirty || contactForm.controls['sendersName'].touched)">
-      <div *ngIf="contactForm.controls['sendersName'].errors?.['required']" class="alert">
-        Este campo es requerido. <mat-icon class="material-symbols-outlined" > warning </mat-icon>
-      </div>
-      <div *ngIf="contactForm.controls['sendersName'].errors?.['minlength']" class="alert">
-        Minimo 4 caracteres. <mat-icon class="material-symbols-outlined"> warning </mat-icon>
-      </div>
-      <div *ngIf="contactForm.controls['sendersName'].errors?.['maxlength']" class="alert">
-        Superó el limite de caracteres permitidos(80). <mat-icon class="material-symbols-outlined"> warning </mat-icon>
-      </div>
-      <div *ngIf="contactForm.controls['sendersName'].errors?.['pattern']" class="alert">
-        No se admiten caracteres especiales. <mat-icon class="material-symbols-outlined"> warning </mat-icon>
-      </div>
-    </div>
+
 
     <div class="labels-form">
       <label for="emailAddress">Email:</label>
-      <input type="email" id="emailAddress" name="emailAddress" formControlName="emailAddress" placeholder="ejemplo@gmail.com" required>
+
+      <div class="input-alert">
+        <input type="email" id="emailAddress" name="emailAddress" formControlName="emailAddress" placeholder="ejemplo@gmail.com" required>
+        <div *ngIf="contactForm.controls['emailAddress'].invalid && (contactForm.controls['emailAddress'].dirty || contactForm.controls['emailAddress'].touched)">
+          <div *ngIf="contactForm.controls['emailAddress'].errors?.['required']" class="alert" (mouseout)="hiddeMessageAlert()">
+            <mat-icon (mouseover)="showMessageAlert()" class="material-symbols-outlined" > warning </mat-icon><span *ngIf="messageAlert">Este campo es requerido.</span>
+          </div>
+          <div *ngIf="contactForm.controls['emailAddress'].errors?.['minlength']" class="alert" (mouseout)="hiddeMessageAlert()">
+            <mat-icon (mouseover)="showMessageAlert()" class="material-symbols-outlined"> warning </mat-icon><span *ngIf="messageAlert">Minimo 8 caracteres.</span>
+          </div>
+          <div *ngIf="contactForm.controls['emailAddress'].errors?.['maxlength']" class="alert" (mouseout)="hiddeMessageAlert()">
+            <mat-icon (mouseover)="showMessageAlert()" class="material-symbols-outlined"> warning </mat-icon><span *ngIf="messageAlert">Superó el limite de caracteres permitidos(90).</span>
+          </div>
+          <div *ngIf="contactForm.controls['emailAddress'].errors?.['pattern']" class="alert" (mouseout)="hiddeMessageAlert()">
+            <mat-icon (mouseover)="showMessageAlert()" class="material-symbols-outlined"> warning </mat-icon><span *ngIf="messageAlert">Este campo solo permite correos..</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div *ngIf="contactForm.controls['emailAddress'].invalid && (contactForm.controls['emailAddress'].dirty || contactForm.controls['emailAddress'].touched)">
-      <div *ngIf="contactForm.controls['emailAddress'].errors?.['required']" class="alert">
-        Este campo es requerido. <mat-icon class="material-symbols-outlined" > warning </mat-icon>
-      </div>
-      <div *ngIf="contactForm.controls['emailAddress'].errors?.['minlength']" class="alert">
-        Minimo 8 caracteres. <mat-icon class="material-symbols-outlined"> warning </mat-icon>
-      </div>
-      <div *ngIf="contactForm.controls['emailAddress'].errors?.['maxlength']" class="alert">
-        Superó el limite de caracteres permitidos(90).<mat-icon class="material-symbols-outlined"> warning </mat-icon>
-      </div>
-      <div *ngIf="contactForm.controls['emailAddress'].errors?.['pattern']" class="alert">
-        Este campo solo permite correos.<mat-icon class="material-symbols-outlined"> warning </mat-icon>
-      </div>
-    </div>
+
 <!--
     <div class="labels-form">
 
