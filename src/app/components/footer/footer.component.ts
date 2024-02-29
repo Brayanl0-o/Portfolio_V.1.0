@@ -16,7 +16,7 @@ export class FooterComponent {
 
   contactForm!: FormGroup;
   errorResponseMessageForm = '';
-  showContactForm: boolean = false;
+  showContactForm: boolean = true;
   showNotAvaible: boolean = false
   sendSuccess:boolean = false;
 
