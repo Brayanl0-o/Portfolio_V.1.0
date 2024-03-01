@@ -10,21 +10,14 @@ import { ContactService } from 'src/app/services/contact.service';
 
 })
 export class FooterComponent {
-  constructor(private contactService: ContactService,
-    private renderer: Renderer2,
-    private fb:FormBuilder){}
+  constructor(private contactService: ContactService){}
 
   contactForm!: FormGroup;
   errorResponseMessageForm = '';
-  showContactForm: boolean = true;
-  showNotAvaible: boolean = false
-  sendSuccess:boolean = false;
+  showContactForm: boolean = false;
 
   ngOnInit(){
     this.contactService.$modal.subscribe((valu) => { this.showContactForm =valu })
-    this.contactService.$success_send.subscribe((valu) => { this.sendSuccess =valu })
-
-
   }
   toggleContactForm(){
     this.contactService.$modal.emit(false);
