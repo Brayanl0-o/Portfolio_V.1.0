@@ -22,7 +22,6 @@ export class FormContactComponent {
     showContactForm: boolean = false;
     showDetailsProject: boolean =  false;
     isLoading: boolean = false;
-    messageAlert: boolean = false;
 
     alertStates: AlertStates = {
       sendersName: false,
@@ -32,12 +31,7 @@ export class FormContactComponent {
     toggleAlertState(field: keyof AlertStates){
       this.alertStates[field] = !this.alertStates[field];
     }
-    showMessageAlert(){
-        this.messageAlert = true;
-    }
-    hiddeMessageAlert(){
-      this.messageAlert = false;
-    }
+
     ngOnInit(){
       this.contactForm = this.initForm();
     }
