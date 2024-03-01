@@ -2,7 +2,7 @@
 .form-contact{
   position: fixed;
   bottom: 0%;
-  left: 0%;
+  left: 2%;
   height: fit-content;
   background-color: #000231;
   border:2px solid gray;
@@ -12,7 +12,7 @@
   margin: auto;
   z-index: 100;
   /* padding-inline: 20px; */
-  animation: slide-up 0.3s forwards;
+  animation: slide-up 0.5s forwards;
 }
 .form-contact>h4{
   text-align: center;
@@ -114,6 +114,7 @@ form>.labels-form>.input-alert>input {
   height: 2rem;
   width: auto;
   margin: 2% 0% 5% 0%;
+  padding-right: 25px;
 }
 form>textarea {
   height:6rem;
@@ -164,7 +165,8 @@ form>textarea {
   fill: #3182ce;
 }
 .alert,
-.alert-end{
+.alert-end,
+.alert-message{
   color: white;
   font-size: x-large;
   margin-top: 2px;
@@ -175,24 +177,27 @@ form>textarea {
   flex-flow: column wrap;
   justify-content: center;
 }
-.alert>.material-symbols-outlined,
-.alert-end>.material-symbols-outlined{
-  color: red;
+.alert>.material-symbols-outlined{
   position: absolute;
+  color: red;
   top: 12px;
   right: 5px;
-
 }
-.form-contact{
-  animation: slide-up 1s forwards;
-  margin-left: 10px;
+.alert-message>.material-symbols-outlined,
+.alert-end>.material-symbols-outlined{
+  color: red;
+}
+.alert-message{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 .input-alert{
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   position: relative;
-
 }
 .alert>span{
   position: absolute;
@@ -202,8 +207,6 @@ form>textarea {
   background-color: #963a10cc;
   border-radius: 10px;
   padding: 5px;
-
-
 }
 @keyframes slide-up {
   from {
@@ -214,28 +217,6 @@ form>textarea {
     transform: translateY(0);
     opacity: 1;
   }
-}
-@keyframes slide-in-top {
-    0% {
-      transform: translateY(100%);
-      animation-timing-function: ease-out;
-    }
-    25% {
-      transform: translateY(-30px);
-      animation-timing-function: ease-in;
-    }
-    50% {
-      transform: translateY(0);
-      animation-timing-function: ease-out;
-    }
-    75% {
-      transform: translateY(-15px);
-      animation-timing-function: ease-in;
-    }
-    100% {
-      transform: translateY(0);
-      animation-timing-function: ease-out;
-    }
 }
 @keyframes spin {
   to {
