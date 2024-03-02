@@ -1,6 +1,6 @@
-import {  Component, Renderer2, ViewEncapsulation} from '@angular/core';
+import {  Component, ViewEncapsulation} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatSnackBar, MatSnackBarConfig, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { ContactService } from 'src/app/services/contact.service';
 import { CustomSnackbarComponent } from '../custom-snackbar/custom-snackbar.component';
 import { AlertStates } from '../../../models/form'
