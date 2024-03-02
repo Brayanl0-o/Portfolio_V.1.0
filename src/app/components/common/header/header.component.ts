@@ -10,17 +10,13 @@ export class HeaderComponent {
     private renderer: Renderer2) { }
   showNavSmall: boolean = false;
 
-
   showNav(){
     if (!this.showNavSmall) {
       this.renderer.setStyle(document.body, 'overflow', 'hidden');
-
     } else {
       this.renderer.removeStyle(document.body, 'overflow');
-
     }
     this.showNavSmall = !this.showNavSmall;
-
   }
 
   closeNav(){
