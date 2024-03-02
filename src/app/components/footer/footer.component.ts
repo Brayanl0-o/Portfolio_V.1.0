@@ -1,13 +1,11 @@
-import { Component, Renderer2,ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css'],
-  // encapsulation: ViewEncapsulation.Emulated
-
 })
 export class FooterComponent {
   constructor(private contactService: ContactService){}
@@ -26,6 +24,4 @@ export class FooterComponent {
       this.contactService.$modal.emit(true);
     }, 100);
   }
-
-
 }
