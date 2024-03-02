@@ -15,7 +15,6 @@ export class ContactService {
   ) { }
 
   $modal = new EventEmitter<any>();
-  $success_send = new EventEmitter<any>();
 
   sendInfoForm(emailData:any){
     const urlSendInfo = `${this.apiUrl}receiveForm/receive-form`
