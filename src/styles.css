@@ -1,41 +1,12 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
-/* You can add global styles to this file, and also import other style files */
-* {
-  margin: 0;
-}
 
 body {
-  background-color: #000000;
-  color: rgb(167, 141, 109);
   margin: 0;
   border: 1px solid wheat;
 }
 
 a {
   text-decoration: none;
-  color: darkorange;
-  font-size: 1.2rem;
 }
 
-.background-sup,
-.background-mid-sup,
-.background-mid-low,
-.background-low {
-  display: block;
-  width: 100%;
-  height: 1080px;
-  background-color: #010103;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding: .1px;
-}
-
-section {
-  display: flexbox;
-  flex-flow: column;
-  margin: auto;
-  width: 45%;
-  padding: 10px;
-}
