@@ -18,20 +18,20 @@
 </header>
 <!-- Nav small screens -->
 <div class="container-wraper" >
-  <div>
-    <input type="checkbox" id="active"  />
-    <label (click)="showNav()" for="active" class="menu-btn">
-      <i></i>
-    </label>
-    <div class="wrapper" *ngIf="showNavSmall" >
-      <ul  >
-        <li><a href="#about"  (click)="showNav()"  >Sobre mí</a></li>
-        <li><a href="#projects" (click)="showNav()" >Proyectos</a></li>
-        <li><a href="#skills" (click)="closeNav()" >Habilidades</a></li>
-        <li><a href="#contact" (click)="closeNav()">Contacto</a></li>
-      </ul>
+  <div class="dropdown">
+    <button (click)="toggleDropdown()" class="dropbtn">
+      <span class="material-symbols-outlined">
+        menu
+      </span>
+    </button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#about"  (click)="toggleDropdown()" >Sobre mí</a>
+      <a href="#projects" (click)="toggleDropdown()" >Proyectos</a>
+      <a href="#skills" (click)="toggleDropdown()" >Habilidades</a>
+      <a href="#contact" (click)="toggleDropdown()">Contacto</a>
     </div>
   </div>
+
 </div>
 
 

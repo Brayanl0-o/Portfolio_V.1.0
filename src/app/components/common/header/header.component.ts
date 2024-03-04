@@ -1,4 +1,4 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,21 +6,28 @@ import { Component, Renderer2 } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor(
-    private renderer: Renderer2) { }
-  showNavSmall: boolean = false;
+  constructor() { }
 
-  showNav(){
-    if (!this.showNavSmall) {
-      this.renderer.setStyle(document.body, 'overflow', 'hidden');
-    } else {
-      this.renderer.removeStyle(document.body, 'overflow');
+    toggleDropdown() {
+      const dropdown = document.getElementById("myDropdown");
+      if (dropdown) {
+        dropdown.classList.toggle("show");
+      }
     }
-    this.showNavSmall = !this.showNavSmall;
-  }
 
-  closeNav(){
-    this.renderer.removeStyle(document.body, 'overflow')
-    this.showNavSmall = false;
-  }
+    closeDropdowns() {
+      const dropdowns = document.getElementsByClassName("dropdown-content");
+      for (let i = 0; i < dropdowns.length; i++) {
+        const openDropdown = dropdowns[i] as HTMLElement;
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+
+    onClickOutside(event: MouseEvent) {
+      if (!(event.target as HTMLElement).matches('.dropbtn')) {
+        this.closeDropdowns();
+      }
+    }
 }
