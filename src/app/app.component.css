@@ -1,29 +1,19 @@
 .background-sup {
   background: url(../assets/images/general/2.webp);
-  background-position: -920px -570px;
+  background-position: -950px -590px;
   padding: .1px;
   border-bottom: 1px solid white;
+  width: 100%;
 }
-
 .background-mid-sup {
   background: linear-gradient(180deg, #010103 0%, #010103 50.02%, #000000 100%);
   border-bottom: 1px solid white;
-
 }
-
 .background-mid-low {
   position: relative;
   background: linear-gradient(180deg, #000000 0%, #020516 59.37%, #020516 100%);
-  background-position: -920px -570px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  box-shadow: 0px 20px 30px #020516;
-  z-index: 5;
-  border-bottom: 1px solid white;
-
+  border-bottom:1px solid white;
 }
-
 .background-low {
   box-shadow: 0px -40px 40px #020516;
   background: url(../assets/images/general/video_game-half_life_2-alyx_vance-silhouette-431084.webp);
@@ -40,33 +30,25 @@
   cursor: pointer;
 }
 .material-symbols-outlined{
-  font-size: 6rem;
+  font-size: calc(5em + 2vw);
   width: fit-content;
   height: fit-content;
-  color: rgba(153, 83, 17, 0.87);
+  color: rgba(207, 105, 9, 0.87);
   mix-blend-mode: difference;
-
 }
 /* Media querys */
-/* @media screen and (max-width:1110px) {
+@media screen and (max-width:1680px) {
   .background-sup {
-    height: fit-content;
-
+    background-position: -980px -680px;
   }
-
-  .background-mid-sup {
-    height: fit-content;
-
-
+}
+@media screen and (max-width:768px) {
+  .background-sup {
+    background-position: -980px -700px;
   }
-
-  .background-mid-low {
-    height: fit-content;
-
-
+}
+@media screen and (max-width:468px) {
+  .background-sup {
+    background-position: -980px -750px;
   }
-
-  .background-low {
-   height: fit-content;
-  }
-} */
+}
