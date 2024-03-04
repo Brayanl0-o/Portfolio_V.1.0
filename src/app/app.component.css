@@ -42,6 +42,21 @@
     background-position: -980px -680px;
   }
 }
+@media screen and (max-width:1520px) {
+ .background-mid-sup {
+    height: 140vh;
+  }
+}
+@media screen and (max-width:1280px) {
+  .background-sup {
+    background-position: -980px -680px;
+  }
+}
+@media screen and (max-width:1068px) {
+  .background-mid-sup {
+    height: 200vh;
+  }
+}
 @media screen and (max-width:768px) {
   .background-sup {
     background-position: -980px -700px;
@@ -50,5 +65,8 @@
 @media screen and (max-width:468px) {
   .background-sup {
     background-position: -980px -750px;
+  }
+  .background-mid-sup {
+    height: 180vh;
   }
 }
