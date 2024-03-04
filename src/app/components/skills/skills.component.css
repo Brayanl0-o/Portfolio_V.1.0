@@ -2,25 +2,27 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin: 7% auto 15% auto;
+  margin: auto;
+  padding-top: 5%;
+  padding-bottom: 10%;
   width: 70%;
 }
 #cont-skills>h2 {
-  width: 100%;
   text-align: center;
+  width: 100%;
   font-size: 2.5rem;
   margin-bottom: 8%;
   color:#bdc3c7;
 }
 #cont-skills h3 {
+  text-align: center;
   width: 100%;
   padding: 5px 0px 5px 0px;
-  text-align: center;
   font-size: 1.6rem;
   border-top: solid 1px white;
   border-bottom: solid 1px white;
-  color: rgb(141, 81, 2);
   margin:auto auto 5% auto;
+  color: rgb(141, 81, 2);
 }
 .backend-frontend,
 .databases-tools{
@@ -36,13 +38,16 @@
 .images {
   display: flex;
   flex-flow: row wrap;
-  margin-top: 3%;
   justify-content: space-around ;
   align-items: center;
+  margin-top: 3%;
 }
 .images>img{
+  box-sizing: border-box;
+  transition: all 1s ease;
+  animation: border-transform 19s linear infinite alternate forwards;
+  animation-play-state: running;
   border-radius: 100%;
-  /* border: dashed 1px white; */
   background-color: #88888833;
   margin: 10px;
   min-width: 100px;
@@ -50,20 +55,16 @@
   min-height: 100px;
   max-height: 100px;
   border: 3px solid #bdc3c7;
-  box-sizing: border-box;
-  transition: all 1s ease;
-  animation: border-transform 19s linear infinite alternate forwards;
   transform: scale(1.1);
-  animation-play-state: running;
 }
 .images>img:hover{
-  transform:scale(1.2);
-  cursor: pointer;
-  border: solid 1px rgb(0, 0, 172);
-  background-color: #000000;
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
   animation-play-state: paused;
+  cursor: pointer;
+  border: solid 1px rgb(0, 0, 172);
+  background-color: #000000;
+  transform:scale(1.2);
 }
 /* Animations */
 @keyframes border-transform{
@@ -142,8 +143,8 @@
   .images {
     display: flex;
     flex-flow: row wrap;
-    margin-top: 3%;
     justify-content: space-around ;
     align-items: center;
+    margin-top: 3%;
   }
 }
