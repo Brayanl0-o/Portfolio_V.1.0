@@ -47,16 +47,31 @@
 .container-projects>ul>li:nth-child(5){
   background-image: url('../../../assets/images/slider-images/deezerCopy.webp');
 }
-.info-projects{
+.info-projects,
+.go-project{
   cursor: pointer;
   mix-blend-mode:difference;
-  position: absolute;
-  right:8px;
-  top:1%;
   border-radius: 50px;
   background-color: rgba(90, 92, 90, 0.815);
-  color: rgba(181, 199, 24, 0.911);
   font-size: 2rem;
+  position: absolute;
+}
+.info-projects{
+  left:8px;
+  top:1%;
+  color: rgba(181, 199, 24, 0.911);
+}
+.go-project{
+  right:8px;
+  top: 80%;
+  transition: ease-in all 1s forwads;
+  font-weight: 900;
+  color: rgba(14, 29, 236, 0.911);
+  mix-blend-mode:normal;
+}
+.go-project:hover{
+  transform: scale(1.1);
+  background-color: rgba(240, 240, 240, 0.815);
 }
 .details-projects{
   display: flex;
@@ -67,7 +82,7 @@
   position: absolute;
   background-color: rgba(71, 69, 69, 0.911);
   color: white;
-  right: 40px;
+  left: 40px;
   top:4%;
   border-radius: 10px;
   padding: 10px;
@@ -80,20 +95,20 @@
 .repos{
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 4%;
   font-size: calc(0.8em + 0.4vw);
 }
-.repost>p:first-child{
-  border-right: 10px solid white;
+.repos>p>a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .content-info>p{
   flex-flow: column;
   padding: 0;
   margin:0px;
   font-size: calc(0.8em + 0.4vw);
-
 }
 .content-info>p>span{
   color: rgba(20, 20, 233, 0.904);
