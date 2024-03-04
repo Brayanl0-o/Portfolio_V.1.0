@@ -3,7 +3,96 @@
 <div class="section" >
   <h3>Proyectos</h3>
 
-  <div class="container" >
+  <div class="container-projects">
+    <ul>
+      <li>
+        <span (click)="toggleShowDetails('allin')" class="info-projects material-symbols-outlined">
+          help
+        </span>
+          <div class="details-projects" *ngIf="!showDetailsProject['allin']">
+            <div class="content-info">
+              <span>Repositorios:</span>
+              <div class="repos">
+                <p>Frontend: <a href="https://github.com/Brayanl0-o/AllInSite_Angular/tree/main" target="_blank"><img src="../../../assets/images/projects/repo-front.png" width="30" height="30" alt="Repositorio Frontend"></a></p>
+                <p>Backend: <a href="https://github.com/Brayanl0-o/AllInSite_API" target="_blank"><img src="../../../assets/images/projects/repo-back.png" width="30" height="30" alt="Repositorio Backend"></a></p>
+              </div>
+              <p>Año de desarrollo: <span class="date">2023-2024</span> </p>
+            </div>
+          </div>
+      </li>
+      <li>
+        <span (click)="toggleShowDetails('books_haven')" class="info-projects material-symbols-outlined">
+          help
+        </span>
+        <a href="https://github.com/programateacademy/c9-pacto-front" target="_blank">
+          <div class="details-projects" *ngIf="showDetailsProject['books_haven']">
+            <div class="content-info">
+              <span>Repositorios:</span>
+              <div class="repos">
+                <p>Frontend: <a href="https://github.com/programateacademy/c9-pacto-front" target="_blank"><img src="../../../assets/images/projects/repo-front.png" width="30" height="30" alt="Repositorio Frontend"></a></p>
+                <p>Backend: <a href="https://github.com/programateacademy/c9-pacto-backend" target="_blank"><img src="../../../assets/images/projects/repo-back.png" width="30" height="30" alt="Repositorio Backend"></a></p>
+              </div>
+              <p>Año de desarrollo:<span class="date">2023</span> </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <span (click)="toggleShowDetails('pacto')" class="info-projects material-symbols-outlined">
+          help
+        </span>
+        <a href="https://github.com/Brayanl0-o/books_Haven" target="_blank">
+          <div class="details-projects" *ngIf="showDetailsProject['pacto']">
+            <div class="content-info">
+              <span>Repositorios:</span>
+              <div class="repos">
+                <p>Frontend: <a href="https://github.com/Brayanl0-o/books_Haven" target="_blank"><img src="../../../assets/images/projects/repo-front.png" width="30" height="30" alt="Repositorio Frontend"></a></p>
+                <p>Backend: <a href="https://github.com/Brayanl0-o/books_Haven" target="_blank"><img src="../../../assets/images/projects/repo-back.png" width="30" height="30" alt="Repositorio Backend"></a></p>
+              </div>
+              <p>Año de desarrollo:<span class="date">2023-2024</span> </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <span (click)="toggleShowDetails('winner_computers')" class="info-projects material-symbols-outlined">
+          help
+        </span>
+        <a href="https://drive.google.com/file/d/128J-V5EV3D_POzHY9tCuJPRfqVfjww9W/view?usp=sharing" target="_blank">
+          <div class="details-projects" *ngIf="showDetailsProject['winner_computers']">
+            <div class="content-info">
+              <span>Repositorios:</span>
+              <div class="repos">
+                <p>Frontend: <a href="https://drive.google.com/file/d/128J-V5EV3D_POzHY9tCuJPRfqVfjww9W/view?usp=sharing" target="_blank"><img src="../../../assets/images/projects/repo-front.png" width="30" height="30" alt="Repositorio Frontend"></a></p>
+                <p>Backend: <a href="https://drive.google.com/file/d/128J-V5EV3D_POzHY9tCuJPRfqVfjww9W/view?usp=sharing" target="_blank"><img src="../../../assets/images/projects/repo-back.png" width="30" height="30" alt="Repositorio Backend"></a></p>
+              </div>
+              <p>Año de desarrollo:<span class="date">2019</span> </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <span (click)="toggleShowDetails('dezeer')" class="info-projects material-symbols-outlined">
+          help
+        </span>
+        <a href="https://copy-deezer.netlify.app" target="_blank">
+          <div class="details-projects" *ngIf="showDetailsProject['dezeer']">
+            <div class="content-info">
+              <span>Repositorios:</span>
+              <div class="repos">
+                <p>Frontend: <a href="https://github.com/Brayanl0-o/deezerCopy" target="_blank"><img src="../../../assets/images/projects/repo-front.png" width="30" height="30" alt="Repositorio Frontend"></a></p>
+                <p>Backend: <a href="No tiene." target="_blank"><img src="../../../assets/images/projects/repo-back.png" width="30" height="30" alt="Repositorio Backend"></a></p>
+              </div>
+              <p>Año de desarrollo:<span class="date">2023</span> </p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- <div class="container" >
     <div class="slider-height-padding">
       <input class="checkbox frst" type="radio" id="slide-1" name="slider" checked/>
       <label for="slide-1"></label>
@@ -93,7 +182,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </div> -->
 </div>
 <!-- <section id="projects">
 

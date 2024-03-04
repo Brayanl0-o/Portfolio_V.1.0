@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { projects_info } from 'src/app/models/projects';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -6,9 +7,16 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
   state_projects = 'hidden';
-  showDetailsProject: boolean =  false;
+  // showDetailsProject: boolean =  false;
 
-  toggleShowDetails(){
-    this.showDetailsProject = !this.showDetailsProject;
+  showDetailsProject: projects_info = {
+    allin:false,
+    books_haven:false,
+    pacto:false,
+    winner_computers:false,
+    dezeer:false,
+  }
+  toggleShowDetails(field: keyof projects_info){
+    this.showDetailsProject[field] = !this.showDetailsProject[field];
   }
 }
