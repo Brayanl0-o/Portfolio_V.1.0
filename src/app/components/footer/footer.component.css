@@ -1,38 +1,38 @@
 #contact{
   position: relative;
   font-size: largers;
-  top: 20%;
+  top: 5%;
   width: 100%;
 }
 footer {
   position: relative;
   width: auto;
   height: auto;
-  margin:10% auto;
-  padding: 10px;
+  margin: auto;
+  padding-top: 5%;
 }
 footer>h4 {
-  font-size: 4rem;
-  color: #8888a5;
-  width: 100%;
   text-align: center;
+  margin-top: 5%;
+  font-size: calc(2.5em + 2.5vw);
+  color: #8888a5;
   margin-bottom: 5%;
 }
 footer>ul{
-  list-style: none;
-  font-size: 1.5rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  width: min-content;
-  gap: 10%;
+  list-style: none;
+  width: fit-content;
   margin: auto;
+  padding: 0px;
+  gap: 10%;
 }
 footer>ul>li{
-  border-radius: 100px;
-  background-color: #8888a527;
   width: fit-content;
   cursor: pointer;
+  border-radius: 100px;
+  background-color: #8888a527;
   padding: 0;
 }
 footer>ul>li>img,
@@ -42,15 +42,7 @@ footer>ul>li>a>img{
   padding: 0px;
 }
 /* Media querys */
-@media(max-width: 1250px) {
-  footer {
-    margin-top: 14%;
-  }
-  footer>h4 {
-    margin-bottom: 8%;
-  }
-}
-@media(max-width: 650px) {
+@media(max-width: 1650px) {
   footer>ul{
     flex-flow:column;
   }
@@ -63,7 +55,7 @@ footer>ul>li>a>img{
 }
 @media(max-width: 450px) {
   footer>h4 {
-    margin: auto;
-    font-size: 3rem;
+    margin-top: 20%;
+    margin-bottom: 25%;
   }
 }
